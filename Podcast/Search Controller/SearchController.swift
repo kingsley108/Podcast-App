@@ -21,7 +21,6 @@ class SearchController: UITableViewController, UISearchBarDelegate {
     
     func setUpView() {
         tableView.backgroundColor = .white
-        self.tableView.separatorStyle = .none
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         searchBar.searchBarStyle = UISearchBar.Style.prominent
         searchBar.placeholder = " Search Podcast"
@@ -60,26 +59,18 @@ class SearchController: UITableViewController, UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange textSearched: String)
     {
         self.searchBar.showsCancelButton = true
-        let parameters = ["term": textSearched, "media": "podcast"]
-        let url = "https://itunes.apple.com/search?"
-        AF.request(url, method: .get, parameters: parameters).validate().response { (response) in
-            guard let data = response.data else {return}
-            self.parseData(data)
+        APIExtension.shared.APIRequestFetcher(searchText: textSearched) { (returnedPodcasts) in
+            self.podcasts = returnedPodcasts
+            tableView.reloadData()
         }
-        
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 132
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         searchBar.text = ""
         searchBar.resignFirstResponder()
-    }
-    
-    func parseData(_ data: Data) {
-        let decoder = JSONDecoder()
-        if let json = try? decoder.decode(searchResult.self, from: data ) {
-            self.podcasts = json.results ?? []
-            tableView.reloadData()
-        }
     }
 }
