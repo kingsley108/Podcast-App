@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Alamofire
+
 var cellId = "SearchCell"
 class SearchController: UITableViewController, UISearchBarDelegate {
-    var podcasts = [Podcast(name: "Lets Build That App", artistName: "Brian Voong"), Podcast(name: "Some Podcast", artistName: "Some Artists")]
+    var podcasts = [Podcast]()
     
     lazy var searchBar: UISearchBar = UISearchBar()
     
@@ -19,6 +21,7 @@ class SearchController: UITableViewController, UISearchBarDelegate {
     
     func setUpView() {
         tableView.backgroundColor = .white
+        self.tableView.separatorStyle = .none
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         searchBar.searchBarStyle = UISearchBar.Style.prominent
         searchBar.placeholder = " Search Podcast"
@@ -48,7 +51,7 @@ class SearchController: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         let currentPodcast = podcasts[indexPath.row]
         cell.textLabel?.numberOfLines = -1
-        cell.textLabel?.text = "\(currentPodcast.name) " + "\n" + "\(currentPodcast.artistName)"
+        cell.textLabel?.text = "\(currentPodcast.collectionName) " + "\n" + "\(currentPodcast.artistName)"
         cell.imageView?.image = #imageLiteral(resourceName: "appicon")
         return cell
     }
@@ -57,12 +60,26 @@ class SearchController: UITableViewController, UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange textSearched: String)
     {
         self.searchBar.showsCancelButton = true
-        print(textSearched)
+        let parameters = ["term": textSearched, "media": "podcast"]
+        let url = "https://itunes.apple.com/search?"
+        AF.request(url, method: .get, parameters: parameters).validate().response { (response) in
+            guard let data = response.data else {return}
+            self.parseData(data)
+        }
+        
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         searchBar.text = ""
         searchBar.resignFirstResponder()
+    }
+    
+    func parseData(_ data: Data) {
+        let decoder = JSONDecoder()
+        if let json = try? decoder.decode(searchResult.self, from: data ) {
+            self.podcasts = json.results ?? []
+            tableView.reloadData()
+        }
     }
 }
