@@ -11,24 +11,19 @@ import Alamofire
 class APIExtension {
     
     static let shared = APIExtension()
-    var results: [Podcast]?
-     func APIRequestFetcher(searchText textSearched: String, completion:([Podcast]) -> ()) {
-        
+    func APIRequestFetcher(searchText textSearched: String, completion: @escaping([Podcast]) -> ()) {
+        var results: [Podcast]?
         let parameters = ["term": textSearched, "media": "podcast"]
-        let url = "https://itunes.apple.com/search?"
-        AF.request(url, method: .get, parameters: parameters).validate().response { (response) in
+        let url = "https://itunes.apple.com/search"
+        AF.request(url, method: .get, parameters: parameters).response { (response) in
+            
             guard let data = response.data else {return}
-            self.parseData(data)
-        }
-        completion(results ?? [Podcast]())
-    }
-    
-    fileprivate func parseData(_ data: Data)  {
-        let decoder = JSONDecoder()
-        if let json = try? decoder.decode(searchResult.self, from: data ) {
-            self.results = json.results
+            let decoder = JSONDecoder()
+            if let json = try? decoder.decode(searchResult.self, from: data ) {
+                results = json.results
+                completion(results ?? [Podcast]())
+            }
         }
     }
-    
 }
 

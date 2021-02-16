@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-var cellId = "SearchCell"
+var cellId = "cellId"
 class SearchController: UITableViewController, UISearchBarDelegate {
     var podcasts = [Podcast]()
     
@@ -16,14 +16,16 @@ class SearchController: UITableViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nib = UINib(nibName: "SearchCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: cellId)
         setUpView()
+       
     }
     
     func setUpView() {
-        tableView.backgroundColor = .white
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        tableView.backgroundColor = .white 
         searchBar.searchBarStyle = UISearchBar.Style.prominent
-        searchBar.placeholder = " Search Podcast"
+        searchBar.placeholder = "Search Podcast"
         searchBar.sizeToFit()
         searchBar.isTranslucent = false
         searchBar.backgroundImage = UIImage()
@@ -37,9 +39,6 @@ class SearchController: UITableViewController, UISearchBarDelegate {
         }
 
     // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return podcasts.count
@@ -47,21 +46,21 @@ class SearchController: UITableViewController, UISearchBarDelegate {
 
  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        let currentPodcast = podcasts[indexPath.row]
-        cell.textLabel?.numberOfLines = -1
-        cell.textLabel?.text = "\(currentPodcast.collectionName) " + "\n" + "\(currentPodcast.artistName)"
-        cell.imageView?.image = #imageLiteral(resourceName: "appicon")
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SearchCell
+        let searchedPodcast = podcasts[indexPath.row]
+        cell.podcast = searchedPodcast
         return cell
     }
     
     // MARK: - SearchBar delegate methods
     func searchBar(_ searchBar: UISearchBar, textDidChange textSearched: String)
     {
+        podcasts = []
+        tableView.reloadData()
         self.searchBar.showsCancelButton = true
         APIExtension.shared.APIRequestFetcher(searchText: textSearched) { (returnedPodcasts) in
             self.podcasts = returnedPodcasts
-            tableView.reloadData()
+            self.tableView.reloadData()
         }
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
