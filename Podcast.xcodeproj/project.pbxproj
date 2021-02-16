@@ -13,6 +13,8 @@
 		1F8439F125DBB6F60087B7A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8439EF25DBB6F60087B7A6 /* LaunchScreen.storyboard */; };
 		1F8439FE25DBB7FE0087B7A6 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8439FD25DBB7FE0087B7A6 /* MainTabBarController.swift */; };
 		1F843A2225DBBAEB0087B7A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F843A2125DBBAEB0087B7A6 /* Assets.xcassets */; };
+		1F843A2825DBDAB10087B7A6 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F843A2725DBDAB10087B7A6 /* SearchController.swift */; };
+		1F843A2D25DBDC570087B7A6 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F843A2C25DBDC570087B7A6 /* Podcast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1F8439F225DBB6F60087B7A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F8439FD25DBB7FE0087B7A6 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		1F843A2125DBBAEB0087B7A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/PodcastsCourseLBTA_ep25_drag_drop_dismissal_pt3/PodcastsCourseLBTA/PodcastsCourseLBTA/Assets.xcassets; sourceTree = "<group>"; };
+		1F843A2725DBDAB10087B7A6 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		1F843A2C25DBDC570087B7A6 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		1F8439E325DBB6F30087B7A6 /* Podcast */ = {
 			isa = PBXGroup;
 			children = (
+				1F843A2F25DBDC630087B7A6 /* Models */,
+				1F843A2A25DBDB3A0087B7A6 /* Search Controller */,
 				1F8439E425DBB6F30087B7A6 /* AppDelegate.swift */,
 				1F8439E625DBB6F30087B7A6 /* SceneDelegate.swift */,
 				1F8439E825DBB6F30087B7A6 /* ViewController.swift */,
@@ -65,6 +71,22 @@
 				1F8439FD25DBB7FE0087B7A6 /* MainTabBarController.swift */,
 			);
 			path = Podcast;
+			sourceTree = "<group>";
+		};
+		1F843A2A25DBDB3A0087B7A6 /* Search Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F843A2725DBDAB10087B7A6 /* SearchController.swift */,
+			);
+			path = "Search Controller";
+			sourceTree = "<group>";
+		};
+		1F843A2F25DBDC630087B7A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F843A2C25DBDC570087B7A6 /* Podcast.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +159,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F8439E925DBB6F30087B7A6 /* ViewController.swift in Sources */,
+				1F843A2825DBDAB10087B7A6 /* SearchController.swift in Sources */,
+				1F843A2D25DBDC570087B7A6 /* Podcast.swift in Sources */,
 				1F8439E525DBB6F30087B7A6 /* AppDelegate.swift in Sources */,
 				1F8439FE25DBB7FE0087B7A6 /* MainTabBarController.swift in Sources */,
 				1F8439E725DBB6F30087B7A6 /* SceneDelegate.swift in Sources */,

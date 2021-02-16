@@ -12,14 +12,13 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTabBar()
-        
     }
     
     func setUpTabBar() {
         self.tabBar.tintColor = .purple
-        viewControllers = [setUpNavControllers(viewController: ViewController(), image: #imageLiteral(resourceName: "favorites"), title: "Favourites"),
-                           setUpNavControllers(viewController: ViewController(), image: #imageLiteral(resourceName: "search"), title: "Search"),
-                           setUpNavControllers(viewController: ViewController(), image: #imageLiteral(resourceName: "downloads"), title: "Downloads"),]
+        viewControllers = [setUpNavControllers(viewController: SearchController(), image: #imageLiteral(resourceName: "search"), title: "Search"),
+            setUpNavControllers(viewController: ViewController(), image: #imageLiteral(resourceName: "favorites"), title: "Favourites"),
+                           setUpNavControllers(viewController: ViewController(), image: #imageLiteral(resourceName: "downloads"), title: "Downloads")]
     }
     
     fileprivate func setUpNavControllers(viewController: UIViewController, image: UIImage, title: String) -> UINavigationController {
