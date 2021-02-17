@@ -23,13 +23,13 @@ class SearchController: UITableViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nib = UINib(nibName: "SearchCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: cellId)
         setUpView()
        
     }
     
     func setUpView() {
+        let nib = UINib(nibName: "SearchCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: cellId)
         tableView.backgroundColor = .white
         tableView.tableFooterView = UIView()
         searchBar.searchBarStyle = UISearchBar.Style.prominent
@@ -86,7 +86,15 @@ class SearchController: UITableViewController, UISearchBarDelegate {
         return noResultsLabel
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedPodcast = podcasts[indexPath.row]
+        let episodesController = EpisodeController()
+        episodesController.navigationItem.title = selectedPodcast.collectionName
+        episodesController.podcast = selectedPodcast
+        navigationController?.pushViewController(episodesController, animated: true)
+    }
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return podcasts.count > 0 && searchBar.text?.isEmpty == false ? 0 : 250
+        return podcasts.count > 0 || searchBar.text!.count > 0 ? 0 : 250
     }
 }

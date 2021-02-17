@@ -19,7 +19,7 @@ class APIExtension {
             
             guard let data = response.data else {return}
             let decoder = JSONDecoder()
-            if let json = try? decoder.decode(searchResult.self, from: data ) {
+            if let json = try? decoder.decode(SearchResult.self, from: data ) {
                 results = json.results
                 completion(results ?? [Podcast]())
             }

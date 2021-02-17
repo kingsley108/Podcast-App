@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct searchResult: Decodable {
+struct SearchResult: Decodable {
     var resultCount: Int?
     var results: [Podcast]?
 }
