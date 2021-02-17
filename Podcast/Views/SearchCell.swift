@@ -1,6 +1,7 @@
 
 
 import UIKit
+import SDWebImage
 
 class SearchCell: UITableViewCell {
     @IBOutlet weak var episodeCount: UILabel!
@@ -12,14 +13,15 @@ class SearchCell: UITableViewCell {
         didSet{
             guard let podName = podcast?.collectionName else {return}
             guard let podAuthor = podcast?.artistName else {return}
+            guard let podcastImage = URL(string: podcast?.artworkUrl600 ?? "") else {return}
             podcastName!.text = podName
             authorLabel!.text = podAuthor
-            podcastCreative!.image = #imageLiteral(resourceName: "appicon")
+            podcastCreative!.sd_setImage(with: podcastImage,completed: nil)
         }
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
 }

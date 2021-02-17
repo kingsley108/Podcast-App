@@ -13,6 +13,13 @@ class SearchController: UITableViewController, UISearchBarDelegate {
     var podcasts = [Podcast]()
     
     lazy var searchBar: UISearchBar = UISearchBar()
+    lazy var label: UILabel = {
+        let lbl = UILabel()
+        lbl.text = "Please enter a search term"
+        lbl.textAlignment = .center
+        lbl.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        return lbl
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +30,8 @@ class SearchController: UITableViewController, UISearchBarDelegate {
     }
     
     func setUpView() {
-        tableView.backgroundColor = .white 
+        tableView.backgroundColor = .white
+        tableView.tableFooterView = UIView()
         searchBar.searchBarStyle = UISearchBar.Style.prominent
         searchBar.placeholder = "Search Podcast"
         searchBar.sizeToFit()
@@ -71,5 +79,14 @@ class SearchController: UITableViewController, UISearchBarDelegate {
         searchBar.showsCancelButton = false
         searchBar.text = ""
         searchBar.resignFirstResponder()
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let noResultsLabel = self.label
+        return noResultsLabel
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return podcasts.count > 0 && searchBar.text?.isEmpty == false ? 0 : 250
     }
 }

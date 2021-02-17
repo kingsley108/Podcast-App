@@ -9,4 +9,8 @@ import Foundation
 struct Podcast: Decodable {
     var collectionName: String
     var artistName: String
+    var feedUrl: String
+    var trackCount: Int
+    var artworkUrl600: String
+    
 }
