@@ -16,29 +16,14 @@ class EpisodeController: UITableViewController {
     var podcast: Podcast? {
         didSet{
             guard let feedUrl = URL(string: podcast!.feedUrl) else {return}
-            let parser = FeedParser(URL: feedUrl)
-            let result = parser.parse()
-            switch result {
-            case .success(let feed):
-                switch feed {
-                case .atom(_):
-                    break
-                case let .rss(feed):
-                    feed.items?.forEach({ (feedItem) in
-                        let episode =  Episodes(feedItem: feedItem)
-                        episodes.append(episode)
-                        tableView.reloadData()
-                    })
-                case .json(_):
-                    break
+            APIExtension.shared.parseFeed(for: feedUrl) { (episodes) in
+                self.episodes = episodes
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
                 }
-                
-            case .failure(let error):
-                print("There was an error parsing", error)
             }
         }
     }
-    
     override func viewDidLoad() {
         setUpTableView()
         super.viewDidLoad()
@@ -65,8 +50,8 @@ class EpisodeController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: episodeCell, for: indexPath) as? EpisodesCell
+        cell?.podcastArtUrl = podcast?.artworkUrl600
         let searchedEpisode = episodes[indexPath.row]
-        cell?.artworkUrl = podcast?.artworkUrl600
         cell?.episodes = searchedEpisode
         return cell!
     }

@@ -11,10 +11,12 @@ struct Episodes {
     var title: String
     var pubdate: Date
     var description: String
+    var imageUrl: String
     
     init(feedItem: RSSFeedItem) {
         self.title = feedItem.title!
         self.pubdate = feedItem.pubDate!
         self.description = feedItem.description ?? ""
+        self.imageUrl = feedItem.iTunes?.iTunesImage?.attributes?.href ?? ""
     }
 }

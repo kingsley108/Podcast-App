@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import FeedKit
 
 class APIExtension {
     
@@ -24,6 +25,20 @@ class APIExtension {
                 completion(results ?? [Podcast]())
             }
         }
+    }
+    
+    func parseFeed(for feedUrl: URL, completion: @escaping ([Episodes]) -> ()) {
+        let parser = FeedParser(URL: feedUrl)
+        let result = parser.parse()
+        switch result {
+        case .success(let feed):
+            let episodes = feed.getFeedItems()
+            completion(episodes)
+        case .failure(let error):
+            print("There was an error parsing", error)
+        }
+        
+        
     }
 }
 

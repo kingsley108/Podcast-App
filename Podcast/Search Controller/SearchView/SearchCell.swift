@@ -17,7 +17,7 @@ class SearchCell: UITableViewCell {
             guard let podcastImage = URL(string: podcast?.artworkUrl600 ?? "") else {return}
             podcastName!.text = podName
             authorLabel!.text = podAuthor
-            episodeCount.text = "\(episodesNumber)"
+            episodeCount.text = "\(episodesNumber) episodes"
             podcastCreative!.sd_setImage(with: podcastImage,completed: nil)
         }
     }

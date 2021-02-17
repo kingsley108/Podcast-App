@@ -11,5 +11,5 @@ struct Podcast: Decodable {
     var artistName: String
     var feedUrl: String
     var trackCount: Int
-    var artworkUrl600: String
+    var artworkUrl600: String?
 }

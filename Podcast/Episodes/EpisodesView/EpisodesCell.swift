@@ -9,7 +9,6 @@ import UIKit
 import SDWebImage
 
 class EpisodesCell: UITableViewCell {
-    var artworkUrl: String?
     @IBOutlet weak var episodeImage: UIImageView!
     @IBOutlet weak var episodeCount: UILabel!
     @IBOutlet weak var episodeDescription: UILabel!{
@@ -22,7 +21,7 @@ class EpisodesCell: UITableViewCell {
             episodeTitle.numberOfLines = 2
         }
     }
-    
+    var podcastArtUrl: String?
     var episodes: Episodes? {
         didSet{
             guard let episode = episodes else {return}
@@ -31,9 +30,8 @@ class EpisodesCell: UITableViewCell {
             episodeCount.text = formatter.string(from: episode.pubdate)
             episodeDescription.text = episode.description
             episodeTitle.text = episode.title
-        
-            episodeImage.sd_setImage(with: URL(string: artworkUrl!), completed: nil)
-            
+            let imageUrlString = episode.imageUrl == "" ? podcastArtUrl!: episode.imageUrl
+            episodeImage.sd_setImage(with: URL(string: imageUrlString), completed: nil)
         }
     }
     override func awakeFromNib() {
