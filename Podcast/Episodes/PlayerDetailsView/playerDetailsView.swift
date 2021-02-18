@@ -17,7 +17,7 @@ class playerDetailsView: UIView {
         didSet{
             episodeImage.layer.cornerRadius = 8
             episodeImage.clipsToBounds = true
-            episodeImage.transform = self.shrunkenTransform
+            episodeImage.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
         }
     }
     
@@ -30,11 +30,9 @@ class playerDetailsView: UIView {
     
     func shrinkImage() {
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseOut) {
-            self.episodeImage.transform = self.shrunkenTransform
+            self.episodeImage.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
         }
     }
-    
-    fileprivate let shrunkenTransform = CGAffineTransform(scaleX: 0.7, y: 0.7)
     
     @IBAction func dismissPlayer(_ sender: Any) {
         removeFromSuperview()
@@ -55,6 +53,7 @@ class playerDetailsView: UIView {
             podcastAuthor.text = episode.author
             configurePlayer()
             episodeImage.sd_setImage(with: URL(string: imageUrlString), completed: nil)
+            
         }
     }
     @IBAction func playPauseControls(_ sender: UIButton) {
@@ -72,21 +71,28 @@ class playerDetailsView: UIView {
     
     fileprivate func configurePlayer() {
         guard let episode = episode else {return}
-        guard let url = URL(string: episode.audioStream) else { return }
-        let playerItem = AVPlayerItem(url: url)
-        player.replaceCurrentItem(with: playerItem)
-        player.play()
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+            guard let audioStream = URL(string: episode.audioStream) else {return}
+            let playerItem = AVPlayerItem(url: audioStream)
+            player.replaceCurrentItem(with: playerItem)
+            playBtn.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+            player.play()
+        }
+        catch {
+            print("there was an error playing the audio", error)
+        }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let time = CMTimeMake(value: 1, timescale: 3)
+        let time = CMTimeMake(value: 1,timescale: 3)
         let times = [NSValue(time: time)]
-        
-         player.addBoundaryTimeObserver(forTimes: times, queue: .main) { [weak self] in
+        player.addBoundaryTimeObserver(forTimes: times, queue: .main) { [weak self] in
             print("Episode started playing")
             self?.enlargeImage()
         }
+        
     }
     
 }
