@@ -14,6 +14,7 @@ struct Episodes {
     var imageUrl: String
     var podcastArtUrl: String?
     var author: String
+    var audioStream: String
     
     init(feedItem: RSSFeedItem) {
         self.title = feedItem.title!
@@ -21,5 +22,6 @@ struct Episodes {
         self.description = feedItem.iTunes?.iTunesSubtitle ?? feedItem.description ?? ""
         self.imageUrl = feedItem.iTunes?.iTunesImage?.attributes?.href ?? ""
         self.author = (feedItem.iTunes?.iTunesAuthor) ?? ""
+        self.audioStream = feedItem.enclosure?.attributes?.url ?? ""
     }
 }

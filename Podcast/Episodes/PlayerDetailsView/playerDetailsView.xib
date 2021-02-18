@@ -100,6 +100,9 @@
                                         <constraint firstAttribute="width" constant="54" id="VL1-ux-bzn"/>
                                     </constraints>
                                     <state key="normal" title="Button" image="play"/>
+                                    <connections>
+                                        <action selector="playButton:" destination="DYh-Sh-IMo" eventType="touchUpInside" id="cW8-aK-157"/>
+                                    </connections>
                                 </button>
                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yRp-dE-aUU">
                                     <rect key="frame" x="329.5" y="0.0" width="95.5" height="331.5"/>
@@ -150,6 +153,7 @@
             <connections>
                 <outlet property="episodeImage" destination="Pn8-aI-8qr" id="lRe-5H-lgB"/>
                 <outlet property="episodeTitle" destination="yej-RO-5CO" id="xq0-Hx-iNS"/>
+                <outlet property="playBtn" destination="6DV-HO-dgL" id="TgD-is-9Oe"/>
                 <outlet property="podcastAuthor" destination="eAw-kj-IwD" id="1wm-fE-sn9"/>
             </connections>
             <point key="canvasLocation" x="-449.27536231884062" y="307.36607142857139"/>

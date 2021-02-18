@@ -10,14 +10,15 @@ import FeedKit
 
 extension Feed {
     
-    func getFeedItems() -> [Episodes]{
+    func getFeedItems(imageUrl: String) -> [Episodes]{
         var episodes = [Episodes]()
         switch self {
         case .atom(_):
             break
         case let .rss(self):
             self.items?.forEach({ (feedItem) in
-                let episode =  Episodes(feedItem: feedItem)
+                var episode =  Episodes(feedItem: feedItem)
+                episode.podcastArtUrl = imageUrl
                 episodes.append(episode)
             })
         case .json(_):

@@ -16,7 +16,8 @@ class EpisodeController: UITableViewController {
     var podcast: Podcast? {
         didSet{
             guard let feedUrl = URL(string: podcast!.feedUrl) else {return}
-            APIExtension.shared.parseFeed(for: feedUrl) { (episodes) in
+            guard let podcastImage = podcast?.artworkUrl600 else {return}
+            APIExtension.shared.parseFeed(for: feedUrl, podcastImageUrl: podcastImage) { (episodes) in
                 self.episodes = episodes
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -53,6 +54,7 @@ class EpisodeController: UITableViewController {
         var searchedEpisode = episodes[indexPath.row]
         searchedEpisode.podcastArtUrl = podcast?.artworkUrl600
         cell?.episodes = searchedEpisode
+        cell?.selectionStyle = .none
         return cell!
     }
     

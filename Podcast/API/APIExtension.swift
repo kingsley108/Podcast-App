@@ -27,12 +27,12 @@ class APIExtension {
         }
     }
     
-    func parseFeed(for feedUrl: URL, completion: @escaping ([Episodes]) -> ()) {
+    func parseFeed(for feedUrl: URL, podcastImageUrl: String, completion: @escaping ([Episodes]) -> ()) {
         let parser = FeedParser(URL: feedUrl)
         let result = parser.parse()
         switch result {
         case .success(let feed):
-            let episodes = feed.getFeedItems()
+            let episodes = feed.getFeedItems(imageUrl: podcastImageUrl)
             completion(episodes)
         case .failure(let error):
             print("There was an error parsing", error)
