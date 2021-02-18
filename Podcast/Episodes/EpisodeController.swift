@@ -50,9 +50,19 @@ class EpisodeController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: episodeCell, for: indexPath) as? EpisodesCell
-        cell?.podcastArtUrl = podcast?.artworkUrl600
-        let searchedEpisode = episodes[indexPath.row]
+        var searchedEpisode = episodes[indexPath.row]
+        searchedEpisode.podcastArtUrl = podcast?.artworkUrl600
         cell?.episodes = searchedEpisode
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        
+        let xibView = Bundle.main.loadNibNamed("playerDetailsView", owner: self, options: nil)!.first as! playerDetailsView
+        xibView.episode = episodes[indexPath.row]
+        xibView.frame = view.frame
+        keyWindow?.addSubview(xibView)
+           
     }
 }

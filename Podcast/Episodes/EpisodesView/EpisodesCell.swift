@@ -21,7 +21,7 @@ class EpisodesCell: UITableViewCell {
             episodeTitle.numberOfLines = 2
         }
     }
-    var podcastArtUrl: String?
+//    var podcastArtUrl: String?
     var episodes: Episodes? {
         didSet{
             guard let episode = episodes else {return}
@@ -30,7 +30,7 @@ class EpisodesCell: UITableViewCell {
             episodeCount.text = formatter.string(from: episode.pubdate)
             episodeDescription.text = episode.description
             episodeTitle.text = episode.title
-            let imageUrlString = episode.imageUrl == "" ? podcastArtUrl!: episode.imageUrl
+            let imageUrlString = (episode.imageUrl == "" ? episode.podcastArtUrl: episode.imageUrl) ?? ""
             episodeImage.sd_setImage(with: URL(string: imageUrlString), completed: nil)
         }
     }
