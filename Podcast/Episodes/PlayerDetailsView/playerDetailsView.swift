@@ -11,6 +11,8 @@ import SDWebImage
 class playerDetailsView: UIView {
     @IBOutlet weak var episodeTitle: UILabel!
     @IBOutlet weak var episodeImage: UIImageView!
+    @IBOutlet weak var podcastAuthor: UILabel!
+    
     @IBAction func dismissPlayer(_ sender: Any) {
         removeFromSuperview()
     }
@@ -21,7 +23,8 @@ class playerDetailsView: UIView {
         didSet{
             guard let episode = episode else {return}
             episodeTitle.text = episode.title
-            let imageUrlString = (episode.imageUrl == "" ? episode.podcastArtUrl: episode.imageUrl) ?? ""
+            let imageUrlString = episode.imageUrl == "" ? episode.podcastArtUrl!: episode.imageUrl
+            podcastAuthor.text = episode.author
             episodeImage.sd_setImage(with: URL(string: imageUrlString), completed: nil)
         }
     }
