@@ -101,7 +101,7 @@
                                     </constraints>
                                     <state key="normal" title="Button" image="play"/>
                                     <connections>
-                                        <action selector="playButton:" destination="DYh-Sh-IMo" eventType="touchUpInside" id="cW8-aK-157"/>
+                                        <action selector="playPauseControls:" destination="DYh-Sh-IMo" eventType="touchUpInside" id="cW8-aK-157"/>
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yRp-dE-aUU">
