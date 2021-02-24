@@ -12,6 +12,7 @@ var episodeCell = "episodeCell"
 
 class EpisodeController: UITableViewController {
     var episodes = [Episodes]()
+    lazy var pagingSpinner = UIActivityIndicatorView(style: .medium)
     
     var podcast: Podcast? {
         didSet{
@@ -66,5 +67,19 @@ class EpisodeController: UITableViewController {
         xibView.frame = view.frame
         keyWindow?.addSubview(xibView)
            
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+        pagingSpinner.startAnimating()
+        pagingSpinner.color = .purple
+        pagingSpinner.hidesWhenStopped = true
+        //tableView.tableHeaderView = pagingSpinner
+        return pagingSpinner
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        
+        return episodes.isEmpty ? 250 : 0
     }
 }
