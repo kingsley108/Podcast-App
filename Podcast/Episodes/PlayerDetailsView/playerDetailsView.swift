@@ -36,6 +36,9 @@ class playerDetailsView: UIView {
         removeFromSuperview()
     }
     
+    @IBAction func volumeSliderMoved(_ sender: UISlider) {
+        player.volume = sender.value
+    }
     
     var player: AVPlayer = {
         let player = AVPlayer()
@@ -89,9 +92,9 @@ class playerDetailsView: UIView {
         let times = [NSValue(time: time)]
         
         let observerTime = CMTimeMake(value: 1, timescale: 2)
-        player.addPeriodicTimeObserver(forInterval: observerTime, queue: .main) { (progresstime) in
-            self.startTimeLabel.text = progresstime.timeString
-            self.updateSlider()
+        player.addPeriodicTimeObserver(forInterval: observerTime, queue: .main) { [weak self] (progresstime) in
+            self?.startTimeLabel.text = progresstime.timeString
+            self?.updateSlider()
         }
         
         player.addBoundaryTimeObserver(forTimes: times, queue: .main) { [weak self] in
@@ -101,9 +104,33 @@ class playerDetailsView: UIView {
         }
     }
     
+    @IBAction func playerSliderScrubber(_ sender: UISlider, event: UIEvent) {
+        let sliderValue = Float64(playerSlider.value)
+        let durationTime = CMTimeGetSeconds(player.currentItem!.duration)
+        let seekTimeInSeconds = CMTimeMakeWithSeconds(sliderValue * durationTime, preferredTimescale: 1)
+        print(seekTimeInSeconds)
+        player.seek(to: seekTimeInSeconds)
+    }
+    
+    @IBAction func scrub15Sec(_ sender: UIButton) {
+        self.playerscrubber(forSec: 15)
+        
+    }
+    
+    @IBAction func scrubBackwards15Sec(_ sender: UIButton) {
+        self.playerscrubber(forSec: -15)
+    }
+    
+    fileprivate func playerscrubber(forSec: Int) {
+        let scrubTime = CMTimeMake(value: Int64(forSec), timescale: 1)
+        let currentTime = player.currentTime()
+        let seekTime = CMTimeAdd(scrubTime, currentTime)
+        player.seek(to: seekTime)
+        
+        
+    }
     
     fileprivate func updateSlider() {
-        
         let currentTime = CMTimeGetSeconds(player.currentTime())
         let finishTime = CMTimeGetSeconds(player.currentItem!.duration)
         let sliderPercentage = (currentTime/finishTime)
