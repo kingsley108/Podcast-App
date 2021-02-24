@@ -26,6 +26,10 @@ class playerDetailsView: UIView {
         
     }
     
+    static func loadNib() -> playerDetailsView {
+        return Bundle.main.loadNibNamed("playerDetailsView", owner: self, options: nil)!.first as! playerDetailsView
+    }
+    
     func shrinkImage() {
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseOut) {
             self.episodeImage.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
@@ -33,7 +37,7 @@ class playerDetailsView: UIView {
     }
     
     @IBAction func dismissPlayer(_ sender: Any) {
-        removeFromSuperview()
+        UIApplication.shared.getRootVC().minimizeView()
     }
     
     @IBAction func volumeSliderMoved(_ sender: UISlider) {
@@ -126,8 +130,6 @@ class playerDetailsView: UIView {
         let currentTime = player.currentTime()
         let seekTime = CMTimeAdd(scrubTime, currentTime)
         player.seek(to: seekTime)
-        
-        
     }
     
     fileprivate func updateSlider() {
