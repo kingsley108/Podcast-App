@@ -35,7 +35,7 @@
                                 <constraint firstAttribute="width" secondItem="Pn8-aI-8qr" secondAttribute="height" multiplier="1:1" id="dDU-D7-ktV"/>
                             </constraints>
                         </imageView>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aMg-Fg-2QK">
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aMg-Fg-2QK">
                             <rect key="frame" x="-2" y="640" width="596" height="37"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="rdm-Vh-tl5"/>
@@ -45,13 +45,13 @@
                             <rect key="frame" x="0.0" y="678" width="592" height="0.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdD-6o-HPG">
-                                    <rect key="frame" x="0.0" y="0.0" width="518.5" height="0.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="535" height="0.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" systemColor="systemGrayColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="58:58:58" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaR-7O-Tu6">
-                                    <rect key="frame" x="520.5" y="0.0" width="71.5" height="0.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="--:--:--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaR-7O-Tu6">
+                                    <rect key="frame" x="537" y="0.0" width="55" height="0.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" systemColor="systemGrayColor"/>
                                     <nil key="highlightedColor"/>
@@ -153,8 +153,11 @@
             <connections>
                 <outlet property="episodeImage" destination="Pn8-aI-8qr" id="lRe-5H-lgB"/>
                 <outlet property="episodeTitle" destination="yej-RO-5CO" id="xq0-Hx-iNS"/>
+                <outlet property="finishTimeLabel" destination="JaR-7O-Tu6" id="pqM-ks-zIc"/>
                 <outlet property="playBtn" destination="6DV-HO-dgL" id="TgD-is-9Oe"/>
+                <outlet property="playerSlider" destination="aMg-Fg-2QK" id="Iqt-3w-sBv"/>
                 <outlet property="podcastAuthor" destination="eAw-kj-IwD" id="1wm-fE-sn9"/>
+                <outlet property="startTimeLabel" destination="OdD-6o-HPG" id="K9i-25-rP3"/>
             </connections>
             <point key="canvasLocation" x="-449.27536231884062" y="307.36607142857139"/>
         </view>

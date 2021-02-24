@@ -1,15 +1,13 @@
-//
-//  playerDetailsView.swift
-//  Podcast
-//
-//  Created by Kingsley Charles on 18/02/2021.
-//
 
 import UIKit
 import SDWebImage
 import AVFoundation
 
 class playerDetailsView: UIView {
+    //MARK: - IBOutlets
+    @IBOutlet weak var playerSlider: UISlider!
+    @IBOutlet weak var startTimeLabel: UILabel!
+    @IBOutlet weak var finishTimeLabel: UILabel!
     @IBOutlet weak var episodeTitle: UILabel!
     @IBOutlet weak var podcastAuthor: UILabel!
     @IBOutlet weak var playBtn: UIButton!
@@ -54,6 +52,7 @@ class playerDetailsView: UIView {
             configurePlayer()
             episodeImage.sd_setImage(with: URL(string: imageUrlString), completed: nil)
             
+            
         }
     }
     @IBAction func playPauseControls(_ sender: UIButton) {
@@ -88,11 +87,26 @@ class playerDetailsView: UIView {
         super.awakeFromNib()
         let time = CMTimeMake(value: 1,timescale: 3)
         let times = [NSValue(time: time)]
-        player.addBoundaryTimeObserver(forTimes: times, queue: .main) { [weak self] in
-            print("Episode started playing")
-            self?.enlargeImage()
+        
+        let observerTime = CMTimeMake(value: 1, timescale: 2)
+        player.addPeriodicTimeObserver(forInterval: observerTime, queue: .main) { (progresstime) in
+            self.startTimeLabel.text = progresstime.timeString
+            self.updateSlider()
         }
         
+        player.addBoundaryTimeObserver(forTimes: times, queue: .main) { [weak self] in
+            guard let durationTime = self?.player.currentItem?.duration.timeString else {return}
+            self?.finishTimeLabel.text = durationTime
+            self?.enlargeImage()
+        }
     }
     
+    
+    fileprivate func updateSlider() {
+        
+        let currentTime = CMTimeGetSeconds(player.currentTime())
+        let finishTime = CMTimeGetSeconds(player.currentItem!.duration)
+        let sliderPercentage = (currentTime/finishTime)
+        playerSlider.value = Float(sliderPercentage)
+    }
 }
