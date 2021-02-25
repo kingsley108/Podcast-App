@@ -152,12 +152,65 @@
                         </stackView>
                     </subviews>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJT-vW-sXx" userLabel="MiniPlayerView">
+                    <rect key="frame" x="0.0" y="0.0" width="640" height="64"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lZS-Ex-5nM">
+                            <rect key="frame" x="8" y="8" width="624" height="48"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="j24-4B-4b5">
+                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="48" id="e2N-Bm-zCa"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFV-Bg-gqf">
+                                    <rect key="frame" x="56" y="0.0" width="456" height="48"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqV-xk-Om7">
+                                    <rect key="frame" x="520" y="0.0" width="48" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="48" id="FuI-ra-X4A"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="play"/>
+                                    <connections>
+                                        <action selector="miniPlayerPlayAction:" destination="DYh-Sh-IMo" eventType="touchUpInside" id="GcN-3s-ilY"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohF-Hw-XEQ">
+                                    <rect key="frame" x="576" y="0.0" width="48" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="48" id="6fs-i4-rGb"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="fastforward15"/>
+                                    <connections>
+                                        <action selector="miniPlayerFastFowardAction:" destination="DYh-Sh-IMo" eventType="touchUpInside" id="z8B-Eh-wWI"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="lZS-Ex-5nM" firstAttribute="top" secondItem="LJT-vW-sXx" secondAttribute="top" constant="8" id="Ace-ed-7hA"/>
+                        <constraint firstAttribute="trailing" secondItem="lZS-Ex-5nM" secondAttribute="trailing" constant="8" id="RVA-4Z-fQs"/>
+                        <constraint firstItem="lZS-Ex-5nM" firstAttribute="leading" secondItem="LJT-vW-sXx" secondAttribute="leading" constant="8" id="Rm8-rO-aYS"/>
+                        <constraint firstAttribute="bottom" secondItem="lZS-Ex-5nM" secondAttribute="bottom" constant="8" id="aen-lI-rYv"/>
+                        <constraint firstAttribute="height" constant="64" id="esK-Bq-cd8"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="CO5-qr-qVy"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="PRA-9y-Jsh" firstAttribute="leading" secondItem="CO5-qr-qVy" secondAttribute="leading" constant="24" id="Gac-G6-XkJ"/>
                 <constraint firstItem="PRA-9y-Jsh" firstAttribute="top" secondItem="CO5-qr-qVy" secondAttribute="top" id="H3O-xN-t2v"/>
+                <constraint firstItem="CO5-qr-qVy" firstAttribute="trailing" secondItem="LJT-vW-sXx" secondAttribute="trailing" id="M9e-oe-vBa"/>
+                <constraint firstItem="LJT-vW-sXx" firstAttribute="leading" secondItem="DYh-Sh-IMo" secondAttribute="leading" id="QRF-ot-hop"/>
+                <constraint firstItem="LJT-vW-sXx" firstAttribute="top" secondItem="DYh-Sh-IMo" secondAttribute="top" id="UD6-Sz-Sqb"/>
                 <constraint firstItem="CO5-qr-qVy" firstAttribute="bottom" secondItem="PRA-9y-Jsh" secondAttribute="bottom" constant="24" id="bKJ-YQ-LLF"/>
                 <constraint firstItem="CO5-qr-qVy" firstAttribute="trailing" secondItem="PRA-9y-Jsh" secondAttribute="trailing" constant="24" id="xWa-Nb-ngi"/>
             </constraints>
@@ -166,6 +219,11 @@
                 <outlet property="episodeImage" destination="Pn8-aI-8qr" id="lRe-5H-lgB"/>
                 <outlet property="episodeTitle" destination="yej-RO-5CO" id="xq0-Hx-iNS"/>
                 <outlet property="finishTimeLabel" destination="JaR-7O-Tu6" id="pqM-ks-zIc"/>
+                <outlet property="mainPlayerView" destination="PRA-9y-Jsh" id="vPR-tS-bvQ"/>
+                <outlet property="miniPlayerEpisodeLabel" destination="QFV-Bg-gqf" id="eew-Af-VUE"/>
+                <outlet property="miniPlayerImage" destination="j24-4B-4b5" id="PDn-dV-p25"/>
+                <outlet property="miniPlayerPlayControls" destination="cqV-xk-Om7" id="07G-tW-ylk"/>
+                <outlet property="miniPlayerView" destination="LJT-vW-sXx" id="66K-JW-BI4"/>
                 <outlet property="playBtn" destination="6DV-HO-dgL" id="TgD-is-9Oe"/>
                 <outlet property="playerSlider" destination="aMg-Fg-2QK" id="Iqt-3w-sBv"/>
                 <outlet property="podcastAuthor" destination="eAw-kj-IwD" id="1wm-fE-sn9"/>

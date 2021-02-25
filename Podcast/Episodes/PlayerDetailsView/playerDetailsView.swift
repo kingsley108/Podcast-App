@@ -5,6 +5,7 @@ import AVFoundation
 
 class playerDetailsView: UIView {
     //MARK: - IBOutlets
+    @IBOutlet weak var mainPlayerView: UIStackView!
     @IBOutlet weak var playerSlider: UISlider!
     @IBOutlet weak var startTimeLabel: UILabel!
     @IBOutlet weak var finishTimeLabel: UILabel!
@@ -16,6 +17,39 @@ class playerDetailsView: UIView {
             episodeImage.layer.cornerRadius = 8
             episodeImage.clipsToBounds = true
             episodeImage.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+        }
+    }
+    
+    //Mini Player Outlets
+    @IBOutlet weak var miniPlayerEpisodeLabel: UILabel!
+    @IBAction func miniPlayerFastFowardAction(_ sender: UIButton) {
+        self.scrub15Sec(sender)
+    }
+    @IBOutlet weak var miniPlayerImage: UIImageView!{
+        didSet{
+            episodeImage.layer.cornerRadius = 8
+            episodeImage.clipsToBounds = true
+            episodeImage.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+        }
+    }
+    @IBOutlet weak var miniPlayerView: UIView!
+    @IBOutlet weak var miniPlayerPlayControls: UIButton!
+    @IBAction func miniPlayerPlayAction(_ sender: UIButton) {
+        self.playPauseControls(sender)
+        
+    }
+    
+    //MARK: - Main App functions
+    var episode: Episodes? {
+        didSet{
+            guard let episode = episode else {return}
+            episodeTitle.text = episode.title
+            let imageUrlString = episode.imageUrl == "" ? episode.podcastArtUrl!: episode.imageUrl
+            podcastAuthor.text = episode.author
+            miniPlayerEpisodeLabel.text = episode.title
+            configurePlayer()
+            episodeImage.sd_setImage(with: URL(string: imageUrlString), completed: nil)
+            miniPlayerImage.sd_setImage(with: URL(string: imageUrlString), completed: nil)
         }
     }
     
@@ -50,27 +84,18 @@ class playerDetailsView: UIView {
         return player
     }()
     
-    var episode: Episodes? {
-        didSet{
-            guard let episode = episode else {return}
-            episodeTitle.text = episode.title
-            let imageUrlString = episode.imageUrl == "" ? episode.podcastArtUrl!: episode.imageUrl
-            podcastAuthor.text = episode.author
-            configurePlayer()
-            episodeImage.sd_setImage(with: URL(string: imageUrlString), completed: nil)
-            
-            
-        }
-    }
+    
     @IBAction func playPauseControls(_ sender: UIButton) {
         if player.timeControlStatus == .playing {
             player.pause()
             playBtn.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+            miniPlayerPlayControls.setImage(#imageLiteral(resourceName: "play"), for: .normal)
             shrinkImage()
         }
         else {
             player.play()
             playBtn.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+            miniPlayerPlayControls.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
             enlargeImage()
         }
     }
@@ -83,6 +108,7 @@ class playerDetailsView: UIView {
             let playerItem = AVPlayerItem(url: audioStream)
             player.replaceCurrentItem(with: playerItem)
             playBtn.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+            miniPlayerPlayControls.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
             player.play()
         }
         catch {
