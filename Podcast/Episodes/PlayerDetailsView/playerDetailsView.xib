@@ -155,6 +155,13 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJT-vW-sXx" userLabel="MiniPlayerView">
                     <rect key="frame" x="0.0" y="0.0" width="640" height="64"/>
                     <subviews>
+                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWg-7T-R15">
+                            <rect key="frame" x="0.0" y="0.0" width="640" height="0.5"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="XRC-IH-wJj"/>
+                            </constraints>
+                        </view>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lZS-Ex-5nM">
                             <rect key="frame" x="8" y="8" width="624" height="48"/>
                             <subviews>
@@ -195,11 +202,14 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="sWg-7T-R15" firstAttribute="top" secondItem="LJT-vW-sXx" secondAttribute="top" id="9mf-gD-v1d"/>
                         <constraint firstItem="lZS-Ex-5nM" firstAttribute="top" secondItem="LJT-vW-sXx" secondAttribute="top" constant="8" id="Ace-ed-7hA"/>
                         <constraint firstAttribute="trailing" secondItem="lZS-Ex-5nM" secondAttribute="trailing" constant="8" id="RVA-4Z-fQs"/>
                         <constraint firstItem="lZS-Ex-5nM" firstAttribute="leading" secondItem="LJT-vW-sXx" secondAttribute="leading" constant="8" id="Rm8-rO-aYS"/>
                         <constraint firstAttribute="bottom" secondItem="lZS-Ex-5nM" secondAttribute="bottom" constant="8" id="aen-lI-rYv"/>
                         <constraint firstAttribute="height" constant="64" id="esK-Bq-cd8"/>
+                        <constraint firstItem="sWg-7T-R15" firstAttribute="leading" secondItem="LJT-vW-sXx" secondAttribute="leading" id="sxE-T2-ihU"/>
+                        <constraint firstAttribute="trailing" secondItem="sWg-7T-R15" secondAttribute="trailing" id="tqG-Bf-Krh"/>
                     </constraints>
                 </view>
             </subviews>

@@ -121,6 +121,8 @@ class playerDetailsView: UIView {
         let time = CMTimeMake(value: 1,timescale: 3)
         let times = [NSValue(time: time)]
         
+        setUpGestures()
+        
         let observerTime = CMTimeMake(value: 1, timescale: 2)
         player.addPeriodicTimeObserver(forInterval: observerTime, queue: .main) { [weak self] (progresstime) in
             self?.startTimeLabel.text = progresstime.timeString
@@ -131,6 +133,31 @@ class playerDetailsView: UIView {
             guard let durationTime = self?.player.currentItem?.duration.timeString else {return}
             self?.finishTimeLabel.text = durationTime
             self?.enlargeImage()
+        }
+    }
+    
+    fileprivate func setUpGestures() {
+        addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDismiss)))
+    }
+    
+    @objc func handleDismiss(sender: UIPanGestureRecognizer) {
+        
+        let viewTranslation: CGPoint
+        switch sender.state {
+        case .changed:
+             viewTranslation = sender.translation(in: self)
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                self.transform = CGAffineTransform(translationX: 0, y: viewTranslation.y)
+            })
+            
+        case .ended:
+                   UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                       self.transform = .identity
+                    self.miniPlayerView.alpha = 1
+                    self.mainPlayerView.alpha = 0
+                   })
+        default:
+            break
         }
     }
     

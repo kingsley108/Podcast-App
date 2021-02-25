@@ -38,7 +38,7 @@ class MainTabBarController: UITabBarController {
         maximizeConstraint?.isActive = false
         minimizeConstraint?.isActive = true
         
-        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1 , options: .curveEaseOut) {
+        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1 , options: .curveEaseOut) {
             self.view.layoutIfNeeded()
             self.tabBar.transform = .identity
             self.playerViewReference.mainPlayerView.alpha = 0
