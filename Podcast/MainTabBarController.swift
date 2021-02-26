@@ -10,7 +10,8 @@ import UIKit
 class MainTabBarController: UITabBarController {
     
     private var maximizeConstraint: NSLayoutConstraint?
-    private var minimizeConstraint : NSLayoutConstraint?
+    private var minimizeConstraint: NSLayoutConstraint?
+    private var bottomnConstraint: NSLayoutConstraint?
     
     let playerViewReference = playerDetailsView.loadNib()
     override func viewDidLoad() {
@@ -23,8 +24,10 @@ class MainTabBarController: UITabBarController {
         maximizeConstraint?.isActive = true
         maximizeConstraint?.constant = 0
         minimizeConstraint?.isActive = false
-        guard let selectedEpisode = episode else {return}
-        playerViewReference.episode = selectedEpisode
+        bottomnConstraint?.constant = 0
+        if let selectedEpisode = episode {
+            playerViewReference.episode = selectedEpisode
+        }
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut) {
             self.view.layoutIfNeeded()
             self.tabBar.transform = CGAffineTransform(scaleX: 0, y: 100)
@@ -37,8 +40,9 @@ class MainTabBarController: UITabBarController {
         
         maximizeConstraint?.isActive = false
         minimizeConstraint?.isActive = true
+        bottomnConstraint?.constant = view.frame.height
         
-        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1 , options: .curveEaseOut) {
+        UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5 , options: .curveEaseOut) {
             self.view.layoutIfNeeded()
             self.tabBar.transform = .identity
             self.playerViewReference.mainPlayerView.alpha = 0
@@ -62,7 +66,8 @@ class MainTabBarController: UITabBarController {
         maximizeConstraint?.isActive = true
         minimizeConstraint = playerViewReference.topAnchor.constraint(equalTo: tabBar.topAnchor, constant: -64)
         
-        playerViewReference.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        bottomnConstraint = playerViewReference.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: view.frame.height)
+        bottomnConstraint?.isActive = true
         playerViewReference.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         playerViewReference.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         

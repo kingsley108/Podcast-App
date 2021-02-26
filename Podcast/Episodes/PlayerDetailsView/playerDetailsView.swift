@@ -38,6 +38,8 @@ class playerDetailsView: UIView {
         self.playPauseControls(sender)
         
     }
+    var viewTranslation = CGPoint(x: 0, y: 0)
+    var velocity = CGPoint(x:0, y:0)
     
     //MARK: - Main App functions
     var episode: Episodes? {
@@ -122,7 +124,6 @@ class playerDetailsView: UIView {
         let times = [NSValue(time: time)]
         
         setUpGestures()
-        
         let observerTime = CMTimeMake(value: 1, timescale: 2)
         player.addPeriodicTimeObserver(forInterval: observerTime, queue: .main) { [weak self] (progresstime) in
             self?.startTimeLabel.text = progresstime.timeString
@@ -136,32 +137,9 @@ class playerDetailsView: UIView {
         }
     }
     
-    fileprivate func setUpGestures() {
-        addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDismiss)))
-    }
     
-    @objc func handleDismiss(sender: UIPanGestureRecognizer) {
-        
-        let viewTranslation: CGPoint
-        switch sender.state {
-        case .changed:
-             viewTranslation = sender.translation(in: self)
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                self.transform = CGAffineTransform(translationX: 0, y: viewTranslation.y)
-            })
-            
-        case .ended:
-                   UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                       self.transform = .identity
-                    self.miniPlayerView.alpha = 1
-                    self.mainPlayerView.alpha = 0
-                   })
-        default:
-            break
-        }
-    }
     
-    @IBAction func playerSliderScrubber(_ sender: UISlider, event: UIEvent) {
+    @IBAction func playerSliderScrubber(_ sender: UISlider) {
         let sliderValue = Float64(playerSlider.value)
         let durationTime = CMTimeGetSeconds(player.currentItem!.duration)
         let seekTimeInSeconds = CMTimeMakeWithSeconds(sliderValue * durationTime, preferredTimescale: 1)
