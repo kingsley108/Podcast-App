@@ -3,4 +3,54 @@
    uuid = "DBB28B9B-8E57-4CDA-960C-59C4E994DAB5"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FB0D53A-4C6A-4604-9DF1-B5131D6B39E4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Podcast/Episodes/PlayerDetailsView/PlayerCommandControls.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "setupRemoteTransportControls()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2FB0D53A-4C6A-4604-9DF1-B5131D6B39E4 - 1ff8f057f3c5de9a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Podcast.PlayerDetailsView.setupRemoteTransportControls() -&gt; ()"
+                  moduleName = "Podcast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kingsley.charles/OneDrive%20-%20Global%20Radio/iOS%20Course%20Materials/IOS%20Portfolio/Podcast/Podcast/Episodes/PlayerDetailsView/PlayerCommandControls.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "436">
+               </Location>
+               <Location
+                  uuid = "2FB0D53A-4C6A-4604-9DF1-B5131D6B39E4 - a5715b16b1703c04"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__C.MPRemoteCommandEvent) -&gt; __C.MPRemoteCommandHandlerStatus in Podcast.PlayerDetailsView.setupRemoteTransportControls() -&gt; ()"
+                  moduleName = "Podcast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kingsley.charles/OneDrive%20-%20Global%20Radio/iOS%20Course%20Materials/IOS%20Portfolio/Podcast/Podcast/Episodes/PlayerDetailsView/PlayerCommandControls.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -13,7 +13,7 @@ class MainTabBarController: UITabBarController {
     private var minimizeConstraint: NSLayoutConstraint?
     private var bottomnConstraint: NSLayoutConstraint?
     
-    let playerViewReference = playerDetailsView.loadNib()
+    let playerViewReference = PlayerDetailsView.loadNib()
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTabBar()

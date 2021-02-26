@@ -3,7 +3,7 @@ import UIKit
 import SDWebImage
 import AVFoundation
 
-class playerDetailsView: UIView {
+class PlayerDetailsView: UIView {
     //MARK: - IBOutlets
     @IBOutlet weak var mainPlayerView: UIStackView!
     @IBOutlet weak var playerSlider: UISlider!
@@ -62,8 +62,8 @@ class playerDetailsView: UIView {
         
     }
     
-    static func loadNib() -> playerDetailsView {
-        return Bundle.main.loadNibNamed("playerDetailsView", owner: self, options: nil)!.first as! playerDetailsView
+    static func loadNib() -> PlayerDetailsView {
+        return Bundle.main.loadNibNamed("playerDetailsView", owner: self, options: nil)!.first as! PlayerDetailsView
     }
     
     func shrinkImage() {
@@ -118,12 +118,9 @@ class playerDetailsView: UIView {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    fileprivate func addObservers() {
         let time = CMTimeMake(value: 1,timescale: 3)
         let times = [NSValue(time: time)]
-        
-        setUpGestures()
         let observerTime = CMTimeMake(value: 1, timescale: 2)
         player.addPeriodicTimeObserver(forInterval: observerTime, queue: .main) { [weak self] (progresstime) in
             self?.startTimeLabel.text = progresstime.timeString
@@ -136,6 +133,16 @@ class playerDetailsView: UIView {
             self?.enlargeImage()
         }
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        setUpGestures()
+        addObservers()
+        setupRemoteTransportControls()
+    }
+    
+    
     
     
     

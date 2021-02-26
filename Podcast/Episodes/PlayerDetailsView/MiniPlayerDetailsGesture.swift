@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension playerDetailsView {
+extension PlayerDetailsView {
     
     func setUpGestures() {
         miniPlayerView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleGesture)))

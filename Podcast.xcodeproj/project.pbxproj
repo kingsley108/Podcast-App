@@ -21,15 +21,16 @@
 		1F843A2225DBBAEB0087B7A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F843A2125DBBAEB0087B7A6 /* Assets.xcassets */; };
 		1F843A2825DBDAB10087B7A6 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F843A2725DBDAB10087B7A6 /* SearchController.swift */; };
 		1F843A2D25DBDC570087B7A6 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F843A2C25DBDC570087B7A6 /* Podcast.swift */; };
-		1F8D832E25E82699002761AD /* miniPlayerDetailsGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D832D25E82699002761AD /* miniPlayerDetailsGesture.swift */; };
-		1F8D833325E83385002761AD /* mainPlayerDetailsGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D833225E83385002761AD /* mainPlayerDetailsGesture.swift */; };
+		1F8D832E25E82699002761AD /* MiniPlayerDetailsGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D832D25E82699002761AD /* MiniPlayerDetailsGesture.swift */; };
+		1F8D833325E83385002761AD /* MainPlayerDetailsGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D833225E83385002761AD /* MainPlayerDetailsGesture.swift */; };
+		1F8D833625E90858002761AD /* PlayerCommandControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D833525E90858002761AD /* PlayerCommandControls.swift */; };
 		1FB5133225E6CDC800DCD729 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5133125E6CDC800DCD729 /* RootController.swift */; };
 		1FB9A86125DC02A200476AF9 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9A86025DC02A100476AF9 /* SearchResults.swift */; };
 		1FB9A86525DC10DD00476AF9 /* APIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9A86425DC10DC00476AF9 /* APIExtension.swift */; };
 		1FB9A87125DC197700476AF9 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9A86F25DC197700476AF9 /* SearchCell.swift */; };
 		1FB9A87225DC197700476AF9 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB9A87025DC197700476AF9 /* SearchCell.xib */; };
 		1FE9069825DE42880048B2AD /* playerDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE9069725DE42880048B2AD /* playerDetailsView.xib */; };
-		1FE9069C25DE4A0D0048B2AD /* playerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE9069B25DE4A0C0048B2AD /* playerDetailsView.swift */; };
+		1FE9069C25DE4A0D0048B2AD /* PlayerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE9069B25DE4A0C0048B2AD /* PlayerDetailsView.swift */; };
 		39DC5A18F1BC9B63FFF76F8D /* Pods_Podcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D530BC6B9C3CE0621ECACA /* Pods_Podcast.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,15 +51,16 @@
 		1F843A2125DBBAEB0087B7A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/PodcastsCourseLBTA_ep25_drag_drop_dismissal_pt3/PodcastsCourseLBTA/PodcastsCourseLBTA/Assets.xcassets; sourceTree = "<group>"; };
 		1F843A2725DBDAB10087B7A6 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		1F843A2C25DBDC570087B7A6 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
-		1F8D832D25E82699002761AD /* miniPlayerDetailsGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniPlayerDetailsGesture.swift; sourceTree = "<group>"; };
-		1F8D833225E83385002761AD /* mainPlayerDetailsGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPlayerDetailsGesture.swift; sourceTree = "<group>"; };
+		1F8D832D25E82699002761AD /* MiniPlayerDetailsGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerDetailsGesture.swift; sourceTree = "<group>"; };
+		1F8D833225E83385002761AD /* MainPlayerDetailsGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPlayerDetailsGesture.swift; sourceTree = "<group>"; };
+		1F8D833525E90858002761AD /* PlayerCommandControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCommandControls.swift; sourceTree = "<group>"; };
 		1FB5133125E6CDC800DCD729 /* RootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
 		1FB9A86025DC02A100476AF9 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		1FB9A86425DC10DC00476AF9 /* APIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIExtension.swift; sourceTree = "<group>"; };
 		1FB9A86F25DC197700476AF9 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		1FB9A87025DC197700476AF9 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		1FE9069725DE42880048B2AD /* playerDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = playerDetailsView.xib; sourceTree = "<group>"; };
-		1FE9069B25DE4A0C0048B2AD /* playerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerDetailsView.swift; sourceTree = "<group>"; };
+		1FE9069B25DE4A0C0048B2AD /* PlayerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsView.swift; sourceTree = "<group>"; };
 		75D91F013331397C4446E7B7 /* Pods-Podcast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podcast.debug.xcconfig"; path = "Target Support Files/Pods-Podcast/Pods-Podcast.debug.xcconfig"; sourceTree = "<group>"; };
 		A0770A456885AC087E30B4B0 /* Pods-Podcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podcast.release.xcconfig"; path = "Target Support Files/Pods-Podcast/Pods-Podcast.release.xcconfig"; sourceTree = "<group>"; };
 		F8D530BC6B9C3CE0621ECACA /* Pods_Podcast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podcast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,10 +183,11 @@
 		1FE9069A25DE49EF0048B2AD /* PlayerDetailsView */ = {
 			isa = PBXGroup;
 			children = (
-				1FE9069B25DE4A0C0048B2AD /* playerDetailsView.swift */,
+				1F8D833525E90858002761AD /* PlayerCommandControls.swift */,
+				1FE9069B25DE4A0C0048B2AD /* PlayerDetailsView.swift */,
 				1FE9069725DE42880048B2AD /* playerDetailsView.xib */,
-				1F8D832D25E82699002761AD /* miniPlayerDetailsGesture.swift */,
-				1F8D833225E83385002761AD /* mainPlayerDetailsGesture.swift */,
+				1F8D832D25E82699002761AD /* MiniPlayerDetailsGesture.swift */,
+				1F8D833225E83385002761AD /* MainPlayerDetailsGesture.swift */,
 			);
 			path = PlayerDetailsView;
 			sourceTree = "<group>";
@@ -322,21 +325,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F8D833325E83385002761AD /* mainPlayerDetailsGesture.swift in Sources */,
+				1F8D833325E83385002761AD /* MainPlayerDetailsGesture.swift in Sources */,
 				1F8439E925DBB6F30087B7A6 /* ViewController.swift in Sources */,
 				1F29315A25DD09CA00A1886A /* EpisodeController.swift in Sources */,
 				1F843A2825DBDAB10087B7A6 /* SearchController.swift in Sources */,
 				1FB9A86525DC10DD00476AF9 /* APIExtension.swift in Sources */,
-				1FE9069C25DE4A0D0048B2AD /* playerDetailsView.swift in Sources */,
+				1FE9069C25DE4A0D0048B2AD /* PlayerDetailsView.swift in Sources */,
 				1FB9A86125DC02A200476AF9 /* SearchResults.swift in Sources */,
 				1F29317425DD3B0800A1886A /* RssExtension.swift in Sources */,
 				1F29316E25DD153500A1886A /* EpisodesCell.swift in Sources */,
-				1F8D832E25E82699002761AD /* miniPlayerDetailsGesture.swift in Sources */,
+				1F8D832E25E82699002761AD /* MiniPlayerDetailsGesture.swift in Sources */,
 				1F843A2D25DBDC570087B7A6 /* Podcast.swift in Sources */,
 				1F8439E525DBB6F30087B7A6 /* AppDelegate.swift in Sources */,
 				1FB5133225E6CDC800DCD729 /* RootController.swift in Sources */,
 				1F8439FE25DBB7FE0087B7A6 /* MainTabBarController.swift in Sources */,
 				1F8439E725DBB6F30087B7A6 /* SceneDelegate.swift in Sources */,
+				1F8D833625E90858002761AD /* PlayerCommandControls.swift in Sources */,
 				1F29316025DD0A4600A1886A /* Episodes.swift in Sources */,
 				1F83E76C25E639A000961107 /* CMTime.swift in Sources */,
 				1FB9A87125DC197700476AF9 /* SearchCell.swift in Sources */,
