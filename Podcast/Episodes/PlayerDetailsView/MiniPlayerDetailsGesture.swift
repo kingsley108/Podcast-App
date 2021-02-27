@@ -65,7 +65,7 @@ extension PlayerDetailsView {
     }
     
     func animateTranslateUp() {
-        UIApplication.shared.getRootVC().maximizeView(episode: nil)
+        UIApplication.shared.getRootVC().maximizeView(episode: nil, allEpisodes: nil)
     }
         
 }

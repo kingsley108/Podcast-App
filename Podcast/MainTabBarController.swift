@@ -20,11 +20,14 @@ class MainTabBarController: UITabBarController {
         setUpPlayerDetails()
     }
     
-    func maximizeView(episode: Episodes?) {
+    func maximizeView(episode: Episodes?, allEpisodes: [Episodes]?) {
         maximizeConstraint?.isActive = true
         maximizeConstraint?.constant = 0
         minimizeConstraint?.isActive = false
         bottomnConstraint?.constant = 0
+        if let allEpisodes = allEpisodes {
+            playerViewReference.listOfEpisodes = allEpisodes
+        }
         if let selectedEpisode = episode {
             playerViewReference.episode = selectedEpisode
         }

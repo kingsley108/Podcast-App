@@ -2,8 +2,12 @@
 import UIKit
 import SDWebImage
 import AVFoundation
+import MediaPlayer
 
 class PlayerDetailsView: UIView {
+    var nowPlayingInfo: [String: Any]?
+    var nowPlayingInfoImage: UIImage?
+    var listOfEpisodes = [Episodes]()
     //MARK: - IBOutlets
     @IBOutlet weak var mainPlayerView: UIStackView!
     @IBOutlet weak var playerSlider: UISlider!
@@ -51,7 +55,9 @@ class PlayerDetailsView: UIView {
             miniPlayerEpisodeLabel.text = episode.title
             configurePlayer()
             episodeImage.sd_setImage(with: URL(string: imageUrlString), completed: nil)
-            miniPlayerImage.sd_setImage(with: URL(string: imageUrlString), completed: nil)
+            miniPlayerImage.sd_setImage(with: URL(string: imageUrlString)) { (image, err, cache, url) in
+                self.nowPlayingInfoImage = image
+            }
         }
     }
     
@@ -88,14 +94,21 @@ class PlayerDetailsView: UIView {
     
     
     @IBAction func playPauseControls(_ sender: UIButton) {
+        setElapsedTime()
         if player.timeControlStatus == .playing {
             player.pause()
+            nowPlayingInfo?[MPNowPlayingInfoPropertyElapsedPlaybackTime] = CMTimeGetSeconds(player.currentTime())
+            nowPlayingInfo?[ MPNowPlayingInfoPropertyPlaybackRate] = 0
+            MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
             playBtn.setImage(#imageLiteral(resourceName: "play"), for: .normal)
             miniPlayerPlayControls.setImage(#imageLiteral(resourceName: "play"), for: .normal)
             shrinkImage()
         }
         else {
             player.play()
+            nowPlayingInfo?[MPNowPlayingInfoPropertyElapsedPlaybackTime] = CMTimeGetSeconds(player.currentTime())
+            nowPlayingInfo?[ MPNowPlayingInfoPropertyPlaybackRate] = 1
+            MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
             playBtn.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
             miniPlayerPlayControls.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
             enlargeImage()
@@ -124,12 +137,13 @@ class PlayerDetailsView: UIView {
         let observerTime = CMTimeMake(value: 1, timescale: 2)
         player.addPeriodicTimeObserver(forInterval: observerTime, queue: .main) { [weak self] (progresstime) in
             self?.startTimeLabel.text = progresstime.timeString
+            guard let durationTime = self?.player.currentItem?.duration.timeString else {return}
+            self?.finishTimeLabel.text = durationTime
+            self?.setUpNotificationView(img: (self?.nowPlayingInfoImage!)!)
             self?.updateSlider()
         }
         
         player.addBoundaryTimeObserver(forTimes: times, queue: .main) { [weak self] in
-            guard let durationTime = self?.player.currentItem?.duration.timeString else {return}
-            self?.finishTimeLabel.text = durationTime
             self?.enlargeImage()
         }
     }
@@ -140,17 +154,25 @@ class PlayerDetailsView: UIView {
         setUpGestures()
         addObservers()
         setupRemoteTransportControls()
+        setupNotificationsInterruptions()
     }
     
-    
+    func setElapsedTime() {
+        nowPlayingInfo?[MPNowPlayingInfoPropertyElapsedPlaybackTime] = CMTimeGetSeconds(player.currentTime())
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
+    }
     
     
     
     @IBAction func playerSliderScrubber(_ sender: UISlider) {
         let sliderValue = Float64(playerSlider.value)
         let durationTime = CMTimeGetSeconds(player.currentItem!.duration)
+        print(durationTime)
         let seekTimeInSeconds = CMTimeMakeWithSeconds(sliderValue * durationTime, preferredTimescale: 1)
         print(seekTimeInSeconds)
+        nowPlayingInfo?[MPNowPlayingInfoPropertyElapsedPlaybackTime] = CMTimeGetSeconds(player.currentTime())
+        nowPlayingInfo?[ MPNowPlayingInfoPropertyPlaybackRate] = 1
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
         player.seek(to: seekTimeInSeconds)
     }
     
