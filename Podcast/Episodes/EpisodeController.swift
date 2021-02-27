@@ -37,8 +37,34 @@ class EpisodeController: UITableViewController {
         tableView.register(nib, forCellReuseIdentifier: episodeCell)
         tableView.backgroundColor = .white
         tableView.tableFooterView = UIView()
+        setUpFavouritesPodcast()
     }
     
+    fileprivate func setUpFavouritesPodcast() {
+        
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "favourites", style: .plain, target: self, action: #selector(favouritePodcast)), UIBarButtonItem(title: "fetch", style: .plain, target: self, action: #selector(fetchPodcast))]
+    }
+    
+    @objc fileprivate func favouritePodcast() {
+        let favouritedEpisode = podcast
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(favouritedEpisode) {
+            let defaults = UserDefaults.standard
+            defaults.set(encoded, forKey: "FavouritedPodcast")
+        }
+    }
+    
+
+    
+    @objc fileprivate func fetchPodcast() {
+        let defaults = UserDefaults.standard
+        if let favouritedPodcast = defaults.object(forKey: "FavouritedPodcast") as? Data {
+            let decoder = JSONDecoder()
+            if let starredPodcast = try? decoder.decode(Podcast.self, from: favouritedPodcast) {
+                print(starredPodcast.artistName, starredPodcast.trackCount)
+            }
+        }
+    }
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Podcast: Decodable {
+struct Podcast: Codable {
     var collectionName: String
     var artistName: String
     var feedUrl: String
