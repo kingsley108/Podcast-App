@@ -41,8 +41,13 @@ class EpisodeController: UITableViewController {
     }
     
     fileprivate func setUpFavouritesPodcast() {
+        navigationController?.navigationBar.tintColor = .purple
+        if fetchPodcast() {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "heart"), style: .plain, target: self, action: nil)
+            return
+        }
         
-        navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "favourites", style: .plain, target: self, action: #selector(favouritePodcast)), UIBarButtonItem(title: "fetch", style: .plain, target: self, action: #selector(fetchPodcast))]
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "favourites", style: .plain, target: self, action: #selector(favouritePodcast))]
     }
     
     @objc fileprivate func favouritePodcast() {
@@ -51,15 +56,16 @@ class EpisodeController: UITableViewController {
         let encoder = JSONEncoder()
         let data = favouritedPodcast.map { try? encoder.encode($0) }
         UserDefaults.standard.set(data, forKey: "FavouritedPodcast")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "heart"), style: .plain, target: self, action: nil)
+        UIApplication.shared.getRootVC().viewControllers?[0].tabBarItem.badgeValue = "New"
     }
     
 
     
-    @objc fileprivate func fetchPodcast() {
+    @objc fileprivate func fetchPodcast() -> Bool {
         let allFavouritedpodcast = UserDefaults.standard.getFavouritesPodcast()
-        allFavouritedpodcast.forEach { (pod) in
-            print(pod.artistName)
-        }
+        guard let _ = allFavouritedpodcast.firstIndex(where: {$0.collectionName == podcast?.collectionName}) else {return false}
+        return true
     }
     // MARK: - Table view data source
     

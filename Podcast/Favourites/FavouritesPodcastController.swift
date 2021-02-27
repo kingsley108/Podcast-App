@@ -21,6 +21,12 @@ class FavouritesPodcastController: UICollectionViewController, UICollectionViewD
         addGesture()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        UIApplication.shared.getRootVC().viewControllers?[0].tabBarItem.badgeValue = nil
+        podcastList = UserDefaults.standard.getFavouritesPodcast()
+        collectionView.reloadData()
+    }
+    
     fileprivate func addGesture() {
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressed))
         self.view.addGestureRecognizer(longPressRecognizer)
@@ -69,6 +75,16 @@ class FavouritesPodcastController: UICollectionViewController, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let measurements = (collectionView.frame.width - 3 * 16) / 2
         return CGSize(width: measurements, height: measurements + 46)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let selectedPodcast = podcastList[indexPath.row]
+        let episodeController = EpisodeController()
+        episodeController.podcast = selectedPodcast
+        episodeController.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(episodeController, animated: true)
+        
     }
 }
 
