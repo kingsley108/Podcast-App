@@ -14,6 +14,7 @@
 		1F29317425DD3B0800A1886A /* RssExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F29317325DD3B0800A1886A /* RssExtension.swift */; };
 		1F7CBFF125EAA09B00E3FCFB /* FavouritesPodcastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7CBFF025EAA09B00E3FCFB /* FavouritesPodcastController.swift */; };
 		1F7CBFF525EAA10A00E3FCFB /* FavouritesPodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7CBFF425EAA10A00E3FCFB /* FavouritesPodcastCell.swift */; };
+		1F7CBFFC25EAB1D100E3FCFB /* FavouritePodcastState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7CBFFB25EAB1D100E3FCFB /* FavouritePodcastState.swift */; };
 		1F83E76C25E639A000961107 /* CMTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F83E76B25E639A000961107 /* CMTime.swift */; };
 		1F8439E525DBB6F30087B7A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8439E425DBB6F30087B7A6 /* AppDelegate.swift */; };
 		1F8439E725DBB6F30087B7A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8439E625DBB6F30087B7A6 /* SceneDelegate.swift */; };
@@ -44,6 +45,7 @@
 		1F29317325DD3B0800A1886A /* RssExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssExtension.swift; sourceTree = "<group>"; };
 		1F7CBFF025EAA09B00E3FCFB /* FavouritesPodcastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesPodcastController.swift; sourceTree = "<group>"; };
 		1F7CBFF425EAA10A00E3FCFB /* FavouritesPodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesPodcastCell.swift; sourceTree = "<group>"; };
+		1F7CBFFB25EAB1D100E3FCFB /* FavouritePodcastState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePodcastState.swift; sourceTree = "<group>"; };
 		1F83E76B25E639A000961107 /* CMTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTime.swift; sourceTree = "<group>"; };
 		1F8439E125DBB6F30087B7A6 /* Podcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8439E425DBB6F30087B7A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				1F29317325DD3B0800A1886A /* RssExtension.swift */,
 				1F83E76B25E639A000961107 /* CMTime.swift */,
 				1FB5133125E6CDC800DCD729 /* RootController.swift */,
+				1F7CBFFB25EAB1D100E3FCFB /* FavouritePodcastState.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				1F8439E725DBB6F30087B7A6 /* SceneDelegate.swift in Sources */,
 				1F8D833625E90858002761AD /* PlayerCommandControls.swift in Sources */,
 				1F29316025DD0A4600A1886A /* Episodes.swift in Sources */,
+				1F7CBFFC25EAB1D100E3FCFB /* FavouritePodcastState.swift in Sources */,
 				1F83E76C25E639A000961107 /* CMTime.swift in Sources */,
 				1FB9A87125DC197700476AF9 /* SearchCell.swift in Sources */,
 			);

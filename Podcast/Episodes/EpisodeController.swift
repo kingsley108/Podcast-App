@@ -46,23 +46,19 @@ class EpisodeController: UITableViewController {
     }
     
     @objc fileprivate func favouritePodcast() {
-        let favouritedEpisode = podcast
+        var favouritedPodcast = UserDefaults.standard.getFavouritesPodcast()
+        favouritedPodcast.append(podcast!)
         let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(favouritedEpisode) {
-            let defaults = UserDefaults.standard
-            defaults.set(encoded, forKey: "FavouritedPodcast")
-        }
+        let data = favouritedPodcast.map { try? encoder.encode($0) }
+        UserDefaults.standard.set(data, forKey: "FavouritedPodcast")
     }
     
 
     
     @objc fileprivate func fetchPodcast() {
-        let defaults = UserDefaults.standard
-        if let favouritedPodcast = defaults.object(forKey: "FavouritedPodcast") as? Data {
-            let decoder = JSONDecoder()
-            if let starredPodcast = try? decoder.decode(Podcast.self, from: favouritedPodcast) {
-                print(starredPodcast.artistName, starredPodcast.trackCount)
-            }
+        let allFavouritedpodcast = UserDefaults.standard.getFavouritesPodcast()
+        allFavouritedpodcast.forEach { (pod) in
+            print(pod.artistName)
         }
     }
     // MARK: - Table view data source

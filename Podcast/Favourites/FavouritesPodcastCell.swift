@@ -8,6 +8,15 @@
 import UIKit
 
 class FavouritesCell: UICollectionViewCell {
+    
+    var podcast: Podcast? {
+        didSet{
+            guard let podcast = podcast else {return}
+            podcastName.text = podcast.collectionName
+            artistName.text = podcast.artistName
+            podcastImage.sd_setImage(with: URL(string: podcast.artworkUrl600 ?? ""))
+        }
+    }
     lazy var podcastName: UILabel = {
         let lbl = UILabel()
         lbl.text = "Podcast Name"
