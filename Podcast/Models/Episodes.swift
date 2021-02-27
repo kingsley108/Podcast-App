@@ -7,7 +7,7 @@
 
 import Foundation
 import FeedKit
-struct Episodes {
+struct Episodes: Codable {
     var title: String
     var pubdate: Date
     var description: String

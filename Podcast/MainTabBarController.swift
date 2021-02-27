@@ -58,7 +58,7 @@ class MainTabBarController: UITabBarController {
         self.tabBar.tintColor = .purple
         viewControllers = [
             setUpNavControllers(viewController: FavouritesPodcastController(collectionViewLayout: UICollectionViewFlowLayout()), image: #imageLiteral(resourceName: "favorites"), title: "Favourites"),setUpNavControllers(viewController: SearchController(), image: #imageLiteral(resourceName: "search"), title: "Search"),
-                           setUpNavControllers(viewController: ViewController(), image: #imageLiteral(resourceName: "downloads"), title: "Downloads")]
+                           setUpNavControllers(viewController: DownloadController(), image: #imageLiteral(resourceName: "downloads"), title: "Downloads")]
     }
     
     

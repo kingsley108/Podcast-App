@@ -40,6 +40,24 @@ class EpisodeController: UITableViewController {
         setUpFavouritesPodcast()
     }
     
+    override func tableView(_ tableView: UITableView,
+                       trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let download = UIContextualAction(style: .normal,
+                                       title: "Download") { [weak self] (action, view, completionHandler) in
+            self?.handleDownload(episode: (self?.episodes[indexPath.row])!)
+                                        completionHandler(true)
+        }
+        download.backgroundColor = .systemGray
+        
+        let configuration = UISwipeActionsConfiguration(actions: [download])
+        return configuration
+    }
+    
+    fileprivate func handleDownload(episode: Episodes) {
+        UserDefaults.standard.downloadEpisode(for: episode)
+
+    }
+    
     fileprivate func setUpFavouritesPodcast() {
         navigationController?.navigationBar.tintColor = .purple
         if fetchPodcast() {
