@@ -1,5 +1,6 @@
 
 import UIKit
+import Foundation
 import SDWebImage
 import AVFoundation
 import MediaPlayer
@@ -115,21 +116,35 @@ class PlayerDetailsView: UIView {
         }
     }
     
+    fileprivate func playAudioStream(_ audioStream: URL) throws {
+        try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+        let playerItem = AVPlayerItem(url: audioStream)
+        player.replaceCurrentItem(with: playerItem)
+        playBtn.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+        miniPlayerPlayControls.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+        player.play()
+    }
+    
     fileprivate func configurePlayer() {
-        guard let episode = episode else {return}
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+            guard let episode = episode else {return}
+            if episode.downloadedEpisodeFilePath != nil {
+                let documentUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask) [0]
+                let url = URL(string: episode.downloadedEpisodeFilePath ?? "")
+                let lastPathComponent = url?.lastPathComponent
+                let fileUrl = documentUrl.appendingPathComponent(lastPathComponent!)
+                try playAudioStream(fileUrl)
+                return
+            }
+            
             guard let audioStream = URL(string: episode.audioStream) else {return}
-            let playerItem = AVPlayerItem(url: audioStream)
-            player.replaceCurrentItem(with: playerItem)
-            playBtn.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
-            miniPlayerPlayControls.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
-            player.play()
+            try playAudioStream(audioStream)
         }
         catch {
             print("there was an error playing the audio", error)
         }
     }
+    
     
     fileprivate func addObservers() {
         let time = CMTimeMake(value: 1,timescale: 3)

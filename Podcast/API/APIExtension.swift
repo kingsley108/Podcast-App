@@ -40,5 +40,22 @@ class APIExtension {
         
         
     }
+    
+    func downloadEpisodeOffline(for episode: Episodes) {
+        var downloadedEpisodes = UserDefaults.standard.getDownloadedEpisodes()
+        guard let index = (downloadedEpisodes.firstIndex{$0.description == episode.description}) else {return}
+        let destination = DownloadRequest.suggestedDownloadDestination()
+        AF.download(episode.audioStream, to:destination)
+                .downloadProgress { (progress) in
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: Variables.NotificationName), object: nil, userInfo: ["Episode Title": episode.title, "Progress": progress])
+                }
+                .response { (response) in
+                    downloadedEpisodes[index].downloadedEpisodeFilePath = response.fileURL?.absoluteString
+                    let encoder = JSONEncoder()
+                    let data = downloadedEpisodes.map { try? encoder.encode($0) }
+                    UserDefaults.standard.set(data, forKey: UserDefaults.downloadKey)
+                        
+            }
+    }
 }
 

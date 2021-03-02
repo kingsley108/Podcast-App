@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:cc="http://web.resource.org/cc/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<channel>
+		<atom:link href="https://letthebeatbuild.libsyn.com/rss" rel="self" type="application/rss+xml"/>
+		<title>Let The Beat Build</title>
+		<pubDate>Fri, 08 May 2020 09:03:02 +0000</pubDate>
+		<lastBuildDate>Sat, 20 Feb 2021 02:10:02 +0000</lastBuildDate>
+		<generator>Libsyn WebEngine 2.0</generator>
+		<link>http://letthebeatbuild.org/</link>
+		<language>en</language>
+		<copyright><![CDATA[Copyright 2018]]></copyright>
+		<docs>http://letthebeatbuild.org/</docs>
+		<itunes:summary><![CDATA[Let The Beat Build is a podcast that focuses on the creative process of music producers. Each episode features a different producer, and discusses in-depth, the process behind one of their tracks. Hosted and produced by Marcelino Villalpando.]]></itunes:summary>
+		<image>
+			<url>https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png</url>
+			<title>Let The Beat Build</title>
+			<link><![CDATA[http://letthebeatbuild.org/]]></link>
+		</image>
+		<itunes:author>Let The Beat Build</itunes:author>
+		<itunes:keywords>musicproductionaudiomusicmusicproducer</itunes:keywords>
+		<itunes:category text="Music"/>
+		<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+		<itunes:explicit>clean</itunes:explicit>
+		<itunes:owner>
+			<itunes:name><![CDATA[Marcelino Villalpando]]></itunes:name>
+			<itunes:email>mvillalp@gmail.com</itunes:email>
+		</itunes:owner>
+		<description><![CDATA[Let The Beat Build is a podcast that focuses on the creative process of music producers. Each episode features a different producer, and discusses in-depth, the process behind one of their tracks. Hosted and produced by Marcelino Villalpando.]]></description>
+		<itunes:subtitle><![CDATA[]]></itunes:subtitle>
+		<itunes:type>episodic</itunes:type>
+		
+
+
+
+		<item>
+			<title>Ep. 16: 14KT</title>
+			<pubDate>Fri, 08 May 2020 09:03:02 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[e315b10b-79b1-47ce-a61f-51c6422d80df]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep-16-14kt]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<p>In this episode, 14KT walks us through his track "Sunday's Yellow," that he co-produced with his mother. We also discuss beat battle strategies, how to apply learning from losing, and exploring creative freedom. </p>]]></description>
+			<content:encoded><![CDATA[<p>In this episode, 14KT walks us through his track "Sunday's Yellow," that he co-produced with his mother. We also discuss beat battle strategies, how to apply learning from losing, and exploring creative freedom. </p>]]></content:encoded>
+			<enclosure length="79491968" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_Ep_16_14KT_050820.mp3?dest-id=638064" />
+			<itunes:duration>33:08</itunes:duration>
+			<itunes:explicit>no</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, 14KT walks us through his track "Sunday's Yellow," that he co-produced with his mother. We also discuss beat battle strategies, how to apply learning from losing, and exploring creative freedom. ]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep. 15: Sikwitit</title>
+			<pubDate>Fri, 13 Mar 2020 11:12:00 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[91b6fad9-3f96-489b-b1f9-31813634d54d]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep-15-sikwitit]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<p>In this episode, Sikwitit walks us through his track "Bilingue" that he produced for Snow Tha Product. We also discuss beat battles, having stage presence, and watching his music being performed live.</p>]]></description>
+			<content:encoded><![CDATA[<p>In this episode, Sikwitit walks us through his track "Bilingue" that he produced for Snow Tha Product. We also discuss beat battles, having stage presence, and watching his music being performed live.</p>]]></content:encoded>
+			<enclosure length="79427648" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_Ep.15_Sikwitit_Final_031320.mp3?dest-id=638064" />
+			<itunes:duration>33:06</itunes:duration>
+			<itunes:explicit>yes</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, Sikwitit walks us through his track "Bilingue" that he produced for Snow Tha Product. We also discuss beat battles, having stage presence, and watching his music being performed live.]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep. 14: ROMderful</title>
+			<pubDate>Wed, 26 Jun 2019 07:10:01 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[9ec375b54a134b30a48ae4ba2d203b35]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep-14-romderful]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<p class="p1">In this episode, Romderful walks us through his track “Let’s Get High,” which is off his debut album Press L To Continue.</p> <p class="p1">We also discuss his studio session with Musiq Soulchild, taking creative risks, and how he used music to overcome a dark time in his life.</p>]]></description>
+			<content:encoded><![CDATA[<p class="p1">In this episode, Romderful walks us through his track “Let’s Get High,” which is off his debut album Press L To Continue.</p> <p class="p1">We also discuss his studio session with Musiq Soulchild, taking creative risks, and how he used music to overcome a dark time in his life.</p>]]></content:encoded>
+			<enclosure length="69897728" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_Ep._14__Rom_Final_062519_V2.mp3?dest-id=638064" />
+			<itunes:duration>29:08</itunes:duration>
+			<itunes:explicit>no</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, Romderful walks us through his track “Let’s Get High,” which is off his debut album Press L To Continue. We also discuss his studio session with Musiq Soulchild, taking creative risks, and how he used music to overcome a dark...]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep.13: El Dusty</title>
+			<pubDate>Mon, 18 Feb 2019 05:06:32 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[2a753bf9a3274930b173058466a2832b]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep13-el-dusty]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<p class="p1">In this episode, El Dusty walks us through <span class="s1">his Cumbia-inspired track “Mi Chola” off his latest project Cumbia City. W</span><span class= "s2">e also discuss how his most recent tour with Cut Chemist has shaped his music production process, as well as his early musical influences growing up in Corpus Christi, TX.</span></p>]]></description>
+			<content:encoded><![CDATA[<p class="p1">In this episode, El Dusty walks us through his Cumbia-inspired track “Mi Chola” off his latest project Cumbia City. We also discuss how his most recent tour with Cut Chemist has shaped his music production process, as well as his early musical influences growing up in Corpus Christi, TX.</p>]]></content:encoded>
+			<enclosure length="71955008" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_El_Dusty_Ep.13_V1.mp3?dest-id=638064" />
+			<itunes:duration>29:59</itunes:duration>
+			<itunes:explicit>yes</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, El Dusty walks us through his Cumbia-inspired track “Mi Chola” off his latest project Cumbia City. We also discuss how his most recent tour with Cut Chemist has shaped his music production process, as well as his early...]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep. 12: Lakim</title>
+			<pubDate>Mon, 17 Dec 2018 05:21:46 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[6f163fa980f149708faca4319a823c69]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep-12-lakim]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<p>In this episode, Lakim walks us through his track "Nightfall," discusses his early collaborations with Soulection, and describes how he used his battle with cancer to push himself musically.</p>]]></description>
+			<content:encoded><![CDATA[<p>In this episode, Lakim walks us through his track "Nightfall," discusses his early collaborations with Soulection, and describes how he used his battle with cancer to push himself musically.</p>]]></content:encoded>
+			<enclosure length="73759808" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_Lakim_Ep.12_V2.mp3?dest-id=638064" />
+			<itunes:duration>30:44</itunes:duration>
+			<itunes:explicit>clean</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, Lakim walks us through his track "Nightfall," discusses his early collaborations with Soulection, and describes how he used his battle with cancer to push himself musically.]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep. 11: Frythm</title>
+			<pubDate>Mon, 03 Sep 2018 10:54:00 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[d6dc81cf31dd4910ad66115f7bd16f07]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep-11-frythm]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<div class= "m_-9014494605739385108gmail-_2cuy m_-9014494605739385108gmail-_3dgx m_-9014494605739385108gmail-_2vxa"> In this episode, Frythm walks us through his track "What You Do To Me," which is off his album Aurora. We also discuss the importance of having his family's support during his music journey, his favorite venue to play at, and his passion for sound design. </div> <div class= "m_-9014494605739385108gmail-_2cuy m_-9014494605739385108gmail-_3dgx m_-9014494605739385108gmail-_2vxa">  </div> <div class= "m_-9014494605739385108gmail-_2cuy m_-9014494605739385108gmail-_3dgx m_-9014494605739385108gmail-_2vxa">  </div>]]></description>
+			<content:encoded><![CDATA[ In this episode, Frythm walks us through his track "What You Do To Me," which is off his album Aurora. We also discuss the importance of having his family's support during his music journey, his favorite venue to play at, and his passion for sound design.       ]]></content:encoded>
+			<enclosure length="60025124" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_EP11_Frythm_08312018_V1.mp3?dest-id=638064" />
+			<itunes:duration>25:01</itunes:duration>
+			<itunes:explicit>clean</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, Frythm walks us through his track "What You Do To Me," which is off his album Aurora. We also discuss the importance of having his family's support during his music journey, his favorite venue to play at, and his passion for...]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep. 10: Decap</title>
+			<pubDate>Thu, 23 Aug 2018 08:16:45 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[4e6e319a381f4a77a574f093f2424849]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep-10-decap]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<p class="gmail-p1"><span class="gmail-s1">In this episode, Decap walks us through his bass-driven track “Alchemy.” We also discuss his inspiration behind his drum pack series "Drums That Knock," playing beats for Joyner Lucas, as well as his recipe for making hard-hitting kick drums.</span></p> <p class="gmail-p1"> </p>]]></description>
+			<content:encoded><![CDATA[<p class="gmail-p1">In this episode, Decap walks us through his bass-driven track “Alchemy.” We also discuss his inspiration behind his drum pack series "Drums That Knock," playing beats for Joyner Lucas, as well as his recipe for making hard-hitting kick drums.</p> <p class="gmail-p1"> </p>]]></content:encoded>
+			<enclosure length="68806447" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_EP10_Decap_08232018_V1.mp3?dest-id=638064" />
+			<itunes:duration>28:41</itunes:duration>
+			<itunes:explicit>clean</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, Decap walks us through his bass-driven track “Alchemy.” We also discuss his inspiration behind his drum pack series "Drums That Knock," playing beats for Joyner Lucas, as well as his recipe for making hard-hitting kick drums.  ]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep. 9: Nym</title>
+			<pubDate>Wed, 30 May 2018 00:43:04 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[d4d2a0eb4a52429984fe1ef86cbf841a]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep-9-nym]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<p>In this episode, Nym walks us through his track "Flipped." We also discuss his concept behind his 2017 release, <em>Lilac Chaser</em>.</p> <p> </p>]]></description>
+			<content:encoded><![CDATA[<p>In this episode, Nym walks us through his track "Flipped." We also discuss his concept behind his 2017 release, <em>Lilac Chaser</em>.</p> <p> </p>]]></content:encoded>
+			<enclosure length="63987377" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_EP9_Nym_05292018_V1.mp3?dest-id=638064" />
+			<itunes:duration>26:40</itunes:duration>
+			<itunes:explicit>clean</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, Nym walks us through his track "Flipped." We also discuss his concept behind his 2017 release, Lilac Chaser.  ]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep. 8: Ian Ewing</title>
+			<pubDate>Wed, 16 May 2018 23:07:42 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[f53f727db895455688b95acbecdcef49]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep-8-ian-ewing]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<p class="m_-4491806390108684991gmail-p1"><span class= "m_-4491806390108684991gmail-s1"><span class="il">In this episode, Ian Ewing walks us through his creative process behind his track "Four Grand." We also discuss how he approaches the collaborative process, as well as his tips on getting over writer's block. </span></span></p> <p class="m_-4491806390108684991gmail-p1"> </p> <div class="yj6qo"> </div>]]></description>
+			<content:encoded><![CDATA[<p class="m_-4491806390108684991gmail-p1">In this episode, Ian Ewing walks us through his creative process behind his track "Four Grand." We also discuss how he approaches the collaborative process, as well as his tips on getting over writer's block. </p> <p class="m_-4491806390108684991gmail-p1"> </p>  ]]></content:encoded>
+			<enclosure length="64376079" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_EP8_IanEwing_05162018_V1.mp3?dest-id=638064" />
+			<itunes:duration>26:50</itunes:duration>
+			<itunes:explicit>clean</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, Ian Ewing walks us through his creative process behind his track "Four Grand." We also discuss how he approaches the collaborative process, as well as his tips on getting over writer's block.     ]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep. 7: Rilla Force</title>
+			<pubDate>Mon, 23 Apr 2018 21:59:54 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[91ac4783b33d53af4e8d22d434bc693d]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep-7-rilla-force]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<p>In this episode, Rilla Force walks us through his creative process behind his track "Jump." We also discuss his inspiration behind creating the genre RNBDM, resembling T-Pain, as well as networking in Los Angeles.</p> <p> </p>]]></description>
+			<content:encoded><![CDATA[<p>In this episode, Rilla Force walks us through his creative process behind his track "Jump." We also discuss his inspiration behind creating the genre RNBDM, resembling T-Pain, as well as networking in Los Angeles.</p> <p> </p>]]></content:encoded>
+			<enclosure length="63828553" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_EP7_RillaForce_04232018_V2.mp3?dest-id=638064" />
+			<itunes:duration>26:36</itunes:duration>
+			<itunes:explicit>clean</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, Rilla Force walks us through his creative process behind his track "Jump." We also discuss his inspiration behind creating the genre RNBDM, resembling T-Pain, as well as networking in Los Angeles.  ]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep. 6: DEFFIE</title>
+			<pubDate>Mon, 09 Apr 2018 08:24:57 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[9f511ef69e225627e73baabf36deee81]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep-6-deffie]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<p class="p1">In this episode, DEFFIE walks us through his creative process behind his bass-driven, Trap beat, "Access Panel." He also describes his journey on how he went from making beats in his bedroom to touring the World, as well as offers insight on how to monetize from music production.</p> <p class="p1"> </p>]]></description>
+			<content:encoded><![CDATA[<p class="p1">In this episode, DEFFIE walks us through his creative process behind his bass-driven, Trap beat, "Access Panel." He also describes his journey on how he went from making beats in his bedroom to touring the World, as well as offers insight on how to monetize from music production.</p> <p class="p1"> </p>]]></content:encoded>
+			<enclosure length="78330692" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_EP6_Deffie_04092018_V1.mp3?dest-id=638064" />
+			<itunes:duration>32:39</itunes:duration>
+			<itunes:explicit>clean</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, DEFFIE walks us through his creative process behind his bass-driven, Trap beat, "Access Panel." He also describes his journey on how he went from making beats in his bedroom to touring the World, as well as offers insight on how to...]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep. 5: Jilk</title>
+			<pubDate>Mon, 12 Mar 2018 16:29:11 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[dd2049bc380696b012db4ddf2989bee3]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep-5-jilk]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<p>In this episode, Jon Worsley of <a href= "https://open.spotify.com/artist/0bwrKYMZPGW3VaoWpeiwNx">Jilk</a>, walks us through their evocative, glitch-inspired track, "Green Creepers." We discuss the evolutions of their group, and his theories on manipulating music.</p> <p> </p>]]></description>
+			<content:encoded><![CDATA[<p>In this episode, Jon Worsley of <a href= "https://open.spotify.com/artist/0bwrKYMZPGW3VaoWpeiwNx">Jilk</a>, walks us through their evocative, glitch-inspired track, "Green Creepers." We discuss the evolutions of their group, and his theories on manipulating music.</p> <p> </p>]]></content:encoded>
+			<enclosure length="58306816" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_EP5_JILK_03122018_V1.mp3?dest-id=638064" />
+			<itunes:duration>24:18</itunes:duration>
+			<itunes:explicit>clean</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, Jon Worsley of , walks us through their evocative, glitch-inspired track, "Green Creepers." We discuss the evolutions of their group, and his theories on manipulating music.  ]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep. 4: Gnome Beats</title>
+			<pubDate>Mon, 26 Feb 2018 23:30:23 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[14254c3fadee8e5799c52cd311b96180]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep-4-gnome-beats]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<p class="p1">In this episode, Gnome Beats walks us through his track "Glaciers x Thunder." We discuss his Crunk and World music influences, as the catalyst for his Ancient-Futuristic sound.</p> <p class="p1"> </p>]]></description>
+			<content:encoded><![CDATA[<p class="p1">In this episode, Gnome Beats walks us through his track "Glaciers x Thunder." We discuss his Crunk and World music influences, as the catalyst for his Ancient-Futuristic sound.</p> <p class="p1"> </p>]]></content:encoded>
+			<enclosure length="58166656" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_EP4_GnomeBeats_02262018_V1.mp3?dest-id=638064" />
+			<itunes:duration>24:15</itunes:duration>
+			<itunes:explicit>clean</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, Gnome Beats walks us through his track "Glaciers x Thunder." We discuss his Crunk and World music influences, as the catalyst for his Ancient-Futuristic sound.  ]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep. 3: Koresma</title>
+			<pubDate>Tue, 13 Feb 2018 07:57:17 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[2fd937206ab079fc0a0e606d5568047e]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep-3-koresma]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<div dir="auto">In this episode, Koresma walks us through his creative process behind the track "Fork In The Road." We discuss his upcoming project, and having nature as a source of inspiration. </div> <div dir="auto"> </div> <p> </p>]]></description>
+			<content:encoded><![CDATA[In this episode, Koresma walks us through his creative process behind the track "Fork In The Road." We discuss his upcoming project, and having nature as a source of inspiration.    <p> </p>]]></content:encoded>
+			<enclosure length="54260070" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_EP3_Koresma_For_iTunes_02132018_V2.mp3?dest-id=638064" />
+			<itunes:duration>22:30</itunes:duration>
+			<itunes:explicit>clean</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, Koresma walks us through his creative process behind the track "Fork In The Road." We discuss his upcoming project, and having nature as a source of inspiration.     ]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep. 2: Birocratic</title>
+			<pubDate>Mon, 29 Jan 2018 15:54:09 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[f52ede9e3d7028025504bf531f0d02e7]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/ep-2-birocratic]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<p>In this episode, Birocratic walks us through his creative process behind the track “Extra Fresh.”</p> <p> </p>]]></description>
+			<content:encoded><![CDATA[<p>In this episode, Birocratic walks us through his creative process behind the track “Extra Fresh.”</p> <p> </p>]]></content:encoded>
+			<enclosure length="55122048" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_EP2_Birocratic_For_iTunes_01292018_v5.mp3?dest-id=638064" />
+			<itunes:duration>22:51</itunes:duration>
+			<itunes:explicit>clean</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, Birocratic walks us through his creative process behind the track “Extra Fresh.”  ]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Ep. 1: Common Tiger</title>
+			<pubDate>Sun, 14 Jan 2018 02:42:16 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[fdc141d8cee58b5f6ab0b43d1d9afa12]]></guid>
+			<link><![CDATA[https://letthebeatbuild.libsyn.com/episode-1-starring-common-tiger]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/e/5/a/5/e5a5549a57dff6a0/LTBB-cover_1400x1400.png" />
+			<description><![CDATA[<p>In this episode, Common Tiger walks us through his creative process behind the track "Threshold" which is off of his EP The Hero's Journey. He also discusses living in a monastery, his creative influences, and making music out of a bus. His music has been featured on Majestic Casual and can be found on Spotify, iTunes, and Soundcloud.</p> <p> </p>]]></description>
+			<content:encoded><![CDATA[<p>In this episode, Common Tiger walks us through his creative process behind the track "Threshold" which is off of his EP The Hero's Journey. He also discusses living in a monastery, his creative influences, and making music out of a bus. His music has been featured on Majestic Casual and can be found on Spotify, iTunes, and Soundcloud.</p> <p> </p>]]></content:encoded>
+			<enclosure length="54710442" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letthebeatbuild/LTBB_EP1_CommonTiger_For_iTunes_01202018_v8.mp3?dest-id=638064" />
+			<itunes:duration>22:41</itunes:duration>
+			<itunes:explicit>clean</itunes:explicit>
+			<itunes:keywords />
+			<itunes:subtitle><![CDATA[In this episode, Common Tiger walks us through his creative process behind the track "Threshold" which is off of his EP The Hero's Journey. He also discusses living in a monastery, his creative influences, and making music out of a bus. His music has...]]></itunes:subtitle>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+	</channel>
+</rss>

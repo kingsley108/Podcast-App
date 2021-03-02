@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:npr="https://www.npr.org/rss/" xmlns:nprml="https://api.npr.org/nprml" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>Up First</title>
+    <link>http://www.npr.org/programs/morning-edition/</link>
+    <description><![CDATA[NPR's Up First is the news you need to start your day. The three biggest stories of the day, with reporting and analysis from NPR News — in 10 minutes. Available weekdays by 6 a.m. ET, with hosts Rachel Martin, Noel King and Steve Inskeep. Now available on Saturdays by 8 a.m. ET, with hosts Lulu Garcia-Navarro and Scott Simon. Subscribe and listen, then support your local NPR station at donate.npr.org.]]></description>
+    <copyright>Copyright 2015-2021 NPR - For Personal Use Only</copyright>
+    <generator>NPR API RSS Generator 0.94</generator>
+    <language>en-us</language>
+    <itunes:summary><![CDATA[NPR's Up First is the news you need to start your day. The three biggest stories of the day, with reporting and analysis from NPR News — in 10 minutes. Available weekdays by 6 a.m. ET, with hosts Rachel Martin, Noel King and Steve Inskeep. Now available on Saturdays by 8 a.m. ET, with hosts Lulu Garcia-Navarro and Scott Simon. Subscribe and listen, then support your local NPR station at donate.npr.org.]]></itunes:summary>
+    <itunes:author>NPR</itunes:author>
+    <itunes:block>no</itunes:block>
+    <itunes:owner>
+      <itunes:email>podcasts@npr.org</itunes:email>
+      <itunes:name>NPR</itunes:name>
+    </itunes:owner>
+    <itunes:category text="News">
+      <itunes:category text="Daily News"/>
+    </itunes:category>
+    <itunes:image href="https://media.npr.org/assets/img/2020/03/30/up-first-tile_sq-8c917c992869803df1f6fe9511c0bd613cab1249.png?s=1400"/>
+    <media:restriction type="country" relationship="allow">es fi fr gb nl no se us dk at ch be au nz ca de it ie lu li ad mc pl pt is mx ee lv lt my gr ar hu cz mt bg sk cy br cl co uy sv py hn pa ni pe ec do gt cr bo id jp th ro il za</media:restriction>
+    <image>
+      <url>https://media.npr.org/assets/img/2020/03/30/up-first-tile_sq-8c917c992869803df1f6fe9511c0bd613cab1249.png?s=1400</url>
+      <title>Up First</title>
+      <link>http://www.npr.org/programs/morning-edition/</link>
+    </image>
+    <lastBuildDate>Sat, 27 Feb 2021 07:24:24 -0500</lastBuildDate>
+    <item>
+      <title>Saturday, February 27, 2021</title>
+      <description><![CDATA[By a slim majority, the House approved Biden's $1.9 trillion pandemic stimulus package, but its passage in the Senate is questionable. A panel of experts endorsed the Johnson & Johnson coronavirus vaccine by a 22-to-0 vote. The U.S. released its findings that blame Saudi's Crown Prince for journalist Jamal Khashoggi's murder.]]></description>
+      <pubDate>Sat, 27 Feb 2021 07:24:24 -0500</pubDate>
+      <copyright>Copyright 2015-2021 NPR - For Personal Use Only</copyright>
+      <guid isPermalink="false">658dec16-5818-4956-9c00-76785d25b185</guid>
+      <link>https://www.npr.org/2021/02/21/970029469/house-passes-covid-relief-bill-new-vaccine-endorsed-report-on-khashoggi-murder</link>
+      <itunes:title>Saturday, February 27, 2021</itunes:title>
+      <itunes:author>NPR</itunes:author>
+      <itunes:summary><![CDATA[By a slim majority, the House approved Biden's $1.9 trillion pandemic stimulus package, but its passage in the Senate is questionable. A panel of experts endorsed the Johnson & Johnson coronavirus vaccine by a 22-to-0 vote. The U.S. released its findings that blame Saudi's Crown Prince for journalist Jamal Khashoggi's murder.]]></itunes:summary>
+      <itunes:image href="https://media.npr.org/assets/img/2021/02/24/UpFirst_New_Logo_NPR_Small_wide-f01c27b52e6edc22229e2621c6064fe967306656.png?s=1400"/>
+      <itunes:duration>985</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <content:encoded><![CDATA[By a slim majority, the House approved Biden's $1.9 trillion pandemic stimulus package, but its passage in the Senate is questionable. A panel of experts endorsed the Johnson & Johnson coronavirus vaccine by a 22-to-0 vote. The U.S. released its findings that blame Saudi's Crown Prince for journalist Jamal Khashoggi's murder.]]></content:encoded>
+      <enclosure url="https://play.podtrac.com/npr-510318/edge1.pod.npr.org/anon.npr-mp3/npr/upfirst/2021/02/20210227_upfirst_uf_02-27-21__-_mix_djh.mp3?awCollectionId=510318&amp;awEpisodeId=970029469&amp;orgId=1&amp;d=985&amp;p=510318&amp;story=970029469&amp;t=podcast&amp;e=970029469&amp;size=0&amp;ft=pod&amp;f=510318" length="0" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>Friday, February 26, 2021</title>
+      <description><![CDATA[The U.S. launched airstrikes in Syria on Thursday targeting Iranian-backed militia groups in the first known offensive military operation carried out by the Biden administration. Also, a COVID-19 vaccine from Johnson & Johnson is on the brink of being authorized by the U.S. Food and Drug Administration for emergency use. And, a former U.S. gymnastics coach died by suicide just hours after being charged with multiple felonies including sexual assault and human trafficking.]]></description>
+      <pubDate>Fri, 26 Feb 2021 05:59:10 -0500</pubDate>
+      <copyright>Copyright 2015-2021 NPR - For Personal Use Only</copyright>
+      <guid isPermalink="false">a33fba6f-a4e5-4918-a213-4a84b680d759</guid>
+      <link>https://www.npr.org/2021/02/21/970028568/u-s-airstrikes-in-syria-johnson-johnson-vaccine-u-s-gymnastics-coach-suicide</link>
+      <itunes:title>Friday, February 26, 2021</itunes:title>
+      <itunes:author>NPR</itunes:author>
+      <itunes:summary><![CDATA[The U.S. launched airstrikes in Syria on Thursday targeting Iranian-backed militia groups in the first known offensive military operation carried out by the Biden administration. Also, a COVID-19 vaccine from Johnson & Johnson is on the brink of being authorized by the U.S. Food and Drug Administration for emergency use. And, a former U.S. gymnastics coach died by suicide just hours after being charged with multiple felonies including sexual assault and human trafficking.]]></itunes:summary>
+      <itunes:image href="https://media.npr.org/assets/img/2021/02/21/UpFirst_New_Logo_NPR_Small_wide-f01c27b52e6edc22229e2621c6064fe967306656.png?s=1400"/>
+      <itunes:duration>799</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <content:encoded><![CDATA[The U.S. launched airstrikes in Syria on Thursday targeting Iranian-backed militia groups in the first known offensive military operation carried out by the Biden administration. Also, a COVID-19 vaccine from Johnson & Johnson is on the brink of being authorized by the U.S. Food and Drug Administration for emergency use. And, a former U.S. gymnastics coach died by suicide just hours after being charged with multiple felonies including sexual assault and human trafficking.]]></content:encoded>
+      <enclosure url="https://play.podtrac.com/npr-510318/edge1.pod.npr.org/anon.npr-mp3/npr/upfirst/2021/02/20210226_upfirst_uf_022621.mp3?awCollectionId=510318&amp;awEpisodeId=970028568&amp;orgId=1&amp;d=799&amp;p=510318&amp;story=970028568&amp;t=podcast&amp;e=970028568&amp;size=12755613&amp;ft=pod&amp;f=510318" length="12755613" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>Thursday, February 25, 2021</title>
+      <description><![CDATA[The Centers for Disease Control has launched a website to help Americans find locations of COVID-19 vaccines in an effort to increase the pace of vaccinations. Also, the Biden administration is set to release a U.S. intelligence assessment on the killing of journalist Jamal Khashoggi by Saudi operatives. And, Postmaster General Louis DeJoy faced heavy criticism in a House committee hearing about ongoing mail delays at the U.S. Postal Service.]]></description>
+      <pubDate>Thu, 25 Feb 2021 05:55:09 -0500</pubDate>
+      <copyright>Copyright 2015-2021 NPR - For Personal Use Only</copyright>
+      <guid isPermalink="false">376c32a6-6d8a-409d-9337-a42d8807baf0</guid>
+      <link>https://www.npr.org/2021/02/21/970027456/covid-19-vaccine-finder-khashoggi-intel-report-hearing-on-postal-service-delays</link>
+      <itunes:title>Thursday, February 25, 2021</itunes:title>
+      <itunes:author>NPR</itunes:author>
+      <itunes:summary><![CDATA[The Centers for Disease Control has launched a website to help Americans find locations of COVID-19 vaccines in an effort to increase the pace of vaccinations. Also, the Biden administration is set to release a U.S. intelligence assessment on the killing of journalist Jamal Khashoggi by Saudi operatives. And, Postmaster General Louis DeJoy faced heavy criticism in a House committee hearing about ongoing mail delays at the U.S. Postal Service.]]></itunes:summary>
+      <itunes:image href="https://media.npr.org/assets/img/2021/02/21/UpFirst_New_Logo_NPR_Small_wide-f01c27b52e6edc22229e2621c6064fe967306656.png?s=1400"/>
+      <itunes:duration>819</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <content:encoded><![CDATA[The Centers for Disease Control has launched a website to help Americans find locations of COVID-19 vaccines in an effort to increase the pace of vaccinations. Also, the Biden administration is set to release a U.S. intelligence assessment on the killing of journalist Jamal Khashoggi by Saudi operatives. And, Postmaster General Louis DeJoy faced heavy criticism in a House committee hearing about ongoing mail delays at the U.S. Postal Service.]]></content:encoded>
+      <enclosure url="https://play.podtrac.com/npr-510318/edge1.pod.npr.org/anon.npr-mp3/npr/upfirst/2021/02/20210225_upfirst_uf_022521.mp3?awCollectionId=510318&amp;awEpisodeId=970027456&amp;orgId=1&amp;d=819&amp;p=510318&amp;story=970027456&amp;t=podcast&amp;e=970027456&amp;size=13084626&amp;ft=pod&amp;f=510318" length="13084626" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>Wednesday, February 24, 2021</title>
+      <description><![CDATA[In a Senate hearing, former U.S. Capitol security officials said that they did not have sufficient information ahead of Jan. 6 to accurately predict the scale of the attack. Also, a grand jury voted that no charges will be filed against Rochester police officers in connection with the March 2020 death of Daniel Prude, a Black man who was in the midst of a mental health crisis during his encounter with the police. And, a national health care provider has administered COVID-19 vaccinations to people deemed ineligible for the scarce vaccine by local health departments, including people with connections to company leaders.]]></description>
+      <pubDate>Wed, 24 Feb 2021 06:24:07 -0500</pubDate>
+      <copyright>Copyright 2015-2021 NPR - For Personal Use Only</copyright>
+      <guid isPermalink="false">207d4de7-c7dd-4e4f-9ef7-2f394a8e7240</guid>
+      <link>https://www.npr.org/2021/02/21/969981423/capitol-security-hearing-no-charges-in-daniel-prude-case-skipping-the-vaccine-li</link>
+      <itunes:title>Wednesday, February 24, 2021</itunes:title>
+      <itunes:author>NPR</itunes:author>
+      <itunes:summary><![CDATA[In a Senate hearing, former U.S. Capitol security officials said that they did not have sufficient information ahead of Jan. 6 to accurately predict the scale of the attack. Also, a grand jury voted that no charges will be filed against Rochester police officers in connection with the March 2020 death of Daniel Prude, a Black man who was in the midst of a mental health crisis during his encounter with the police. And, a national health care provider has administered COVID-19 vaccinations to people deemed ineligible for the scarce vaccine by local health departments, including people with connections to company leaders.]]></itunes:summary>
+      <itunes:image href="https://media.npr.org/assets/img/2021/02/21/UpFirst_New_Logo_NPR_Small_wide-f01c27b52e6edc22229e2621c6064fe967306656.png?s=1400"/>
+      <itunes:duration>860</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <content:encoded><![CDATA[In a Senate hearing, former U.S. Capitol security officials said that they did not have sufficient information ahead of Jan. 6 to accurately predict the scale of the attack. Also, a grand jury voted that no charges will be filed against Rochester police officers in connection with the March 2020 death of Daniel Prude, a Black man who was in the midst of a mental health crisis during his encounter with the police. And, a national health care provider has administered COVID-19 vaccinations to people deemed ineligible for the scarce vaccine by local health departments, including people with connections to company leaders.]]></content:encoded>
+      <enclosure url="https://play.podtrac.com/npr-510318/edge1.pod.npr.org/anon.npr-mp3/npr/upfirst/2021/02/20210224_upfirst_20210224_upfirst__uf_022421v2.mp3?awCollectionId=510318&amp;awEpisodeId=969981423&amp;orgId=1&amp;d=860&amp;p=510318&amp;story=969981423&amp;t=podcast&amp;e=969981423&amp;size=13561257&amp;ft=pod&amp;f=510318" length="13561257" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>Tuesday, February 23, 2021</title>
+      <description><![CDATA[The Biden administration has prioritized vaccinating the country quickly and equitably. But making sure vaccines reach communities of color has been a challenge. Also, the Senate holds the first hearing into the Capitol riot on January 6. And, we go to the recovery efforts in Houston, Texas in the wake of the disastrous winter storm and power outages that struck the state last week.]]></description>
+      <pubDate>Tue, 23 Feb 2021 06:25:21 -0500</pubDate>
+      <copyright>Copyright 2015-2021 NPR - For Personal Use Only</copyright>
+      <guid isPermalink="false">6f62bd3c-e9ec-4c58-9b48-641c73d6cc04</guid>
+      <link>https://www.npr.org/2021/02/21/969980728/inequality-in-vaccine-distribution-capitol-riot-hearings-texas-recovery</link>
+      <itunes:title>Tuesday, February 23, 2021</itunes:title>
+      <itunes:author>NPR</itunes:author>
+      <itunes:summary><![CDATA[The Biden administration has prioritized vaccinating the country quickly and equitably. But making sure vaccines reach communities of color has been a challenge. Also, the Senate holds the first hearing into the Capitol riot on January 6. And, we go to the recovery efforts in Houston, Texas in the wake of the disastrous winter storm and power outages that struck the state last week.]]></itunes:summary>
+      <itunes:image href="https://media.npr.org/assets/img/2021/02/21/UpFirst_New_Logo_NPR_Small_wide-f01c27b52e6edc22229e2621c6064fe967306656.png?s=1400"/>
+      <itunes:duration>872</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <content:encoded><![CDATA[The Biden administration has prioritized vaccinating the country quickly and equitably. But making sure vaccines reach communities of color has been a challenge. Also, the Senate holds the first hearing into the Capitol riot on January 6. And, we go to the recovery efforts in Houston, Texas in the wake of the disastrous winter storm and power outages that struck the state last week.]]></content:encoded>
+      <enclosure url="https://play.podtrac.com/npr-510318/edge1.pod.npr.org/anon.npr-mp3/npr/upfirst/2021/02/20210223_upfirst_uf_022321_final.mp3?awCollectionId=510318&amp;awEpisodeId=969980728&amp;orgId=1&amp;d=872&amp;p=510318&amp;story=969980728&amp;t=podcast&amp;e=969980728&amp;size=13924047&amp;ft=pod&amp;f=510318" length="13924047" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>Monday, February 22, 2021</title>
+      <description><![CDATA[The U.S. is nearing 500,000 deaths from COVID-19, almost a year since the country's first death from the disease. Also, Judge Merrick Garland finally gets a confirmation hearing, but this time it is to take the role of President Biden's attorney general. And, Texans who were fortunate enough to have power last week during a devastating winter storm are now facing massive electricity bills. Why?]]></description>
+      <pubDate>Mon, 22 Feb 2021 05:55:57 -0500</pubDate>
+      <copyright>Copyright 2015-2021 NPR - For Personal Use Only</copyright>
+      <guid isPermalink="false">67d1a7f7-9ef0-400d-b3d1-a5afa7bccc58</guid>
+      <link>https://www.npr.org/2021/02/21/969979855/u-s-nears-500k-coronavirus-deaths-merrick-garland-hearing-texas-electric-bills</link>
+      <itunes:title>Monday, February 22, 2021</itunes:title>
+      <itunes:author>NPR</itunes:author>
+      <itunes:summary><![CDATA[The U.S. is nearing 500,000 deaths from COVID-19, almost a year since the country's first death from the disease. Also, Judge Merrick Garland finally gets a confirmation hearing, but this time it is to take the role of President Biden's attorney general. And, Texans who were fortunate enough to have power last week during a devastating winter storm are now facing massive electricity bills. Why?]]></itunes:summary>
+      <itunes:image href="https://media.npr.org/assets/img/2021/02/21/UpFirst_New_Logo_NPR_Small_wide-f01c27b52e6edc22229e2621c6064fe967306656.png?s=1400"/>
+      <itunes:duration>816</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:episodeType>full</itunes:episodeType>
+      <content:encoded><![CDATA[The U.S. is nearing 500,000 deaths from COVID-19, almost a year since the country's first death from the disease. Also, Judge Merrick Garland finally gets a confirmation hearing, but this time it is to take the role of President Biden's attorney general. And, Texans who were fortunate enough to have power last week during a devastating winter storm are now facing massive electricity bills. Why?]]></content:encoded>
+      <enclosure url="https://play.podtrac.com/npr-510318/edge1.pod.npr.org/anon.npr-mp3/npr/upfirst/2021/02/20210222_upfirst_uf_022221.mp3?awCollectionId=510318&amp;awEpisodeId=969979855&amp;orgId=1&amp;d=816&amp;p=510318&amp;story=969979855&amp;t=podcast&amp;e=969979855&amp;size=13037505&amp;ft=pod&amp;f=510318" length="13037505" type="audio/mpeg"/>
+    </item>
+  </channel>
+</rss>

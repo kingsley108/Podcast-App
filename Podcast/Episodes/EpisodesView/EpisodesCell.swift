@@ -9,6 +9,7 @@ import UIKit
 import SDWebImage
 
 class EpisodesCell: UITableViewCell {
+    @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var episodeImage: UIImageView!
     @IBOutlet weak var episodeCount: UILabel!
     @IBOutlet weak var episodeDescription: UILabel!{

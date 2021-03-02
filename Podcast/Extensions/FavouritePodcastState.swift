@@ -25,11 +25,12 @@ extension UserDefaults {
     }
     
     func downloadEpisode(for episode: Episodes) {
-        var downloadedPodcast = UserDefaults.standard.getDownloadedEpisodes()
-        downloadedPodcast.append(episode)
+        var downloadedEpisodes = UserDefaults.standard.getDownloadedEpisodes()
+        downloadedEpisodes.append(episode)
         let encoder = JSONEncoder()
-        let data = downloadedPodcast.map { try? encoder.encode($0) }
+        let data = downloadedEpisodes.map { try? encoder.encode($0) }
         UserDefaults.standard.set(data, forKey: UserDefaults.downloadKey)
+        APIExtension.shared.downloadEpisodeOffline(for: episode)
     }
     
     func getDownloadedEpisodes() -> [Episodes] {

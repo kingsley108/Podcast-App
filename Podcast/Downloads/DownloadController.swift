@@ -6,15 +6,17 @@
 //
 
 import UIKit
+import Foundation
 
 class DownloadController: UITableViewController {
     var downloadedEpisodes = UserDefaults.standard.getDownloadedEpisodes()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpTableView()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.downloadNotificationRecieved(notification:)), name: Notification.Name(Variables.NotificationName), object: nil)
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         downloadedEpisodes = UserDefaults.standard.getDownloadedEpisodes()
@@ -26,6 +28,17 @@ class DownloadController: UITableViewController {
         tableView.register(nib, forCellReuseIdentifier: episodeCell)
         tableView.backgroundColor = .white
         tableView.tableFooterView = UIView()
+        
+    }
+    
+    @objc func downloadNotificationRecieved(notification: Notification) {
+        let progress = notification.userInfo?["Progress"] as? String
+        let episodeTitle = notification.userInfo?["Episode Title"] as? String
+        guard let index = downloadedEpisodes.firstIndex(where: {$0.title == episodeTitle}) else {return}
+        let currentCell = self.tableView.cellForRow(at: IndexPath(row: index, section: 0)) as? EpisodesCell
+        print(progress)
+        currentCell?.progressLabel.isHidden = true
+        
         
     }
     // MARK: - Table view data source

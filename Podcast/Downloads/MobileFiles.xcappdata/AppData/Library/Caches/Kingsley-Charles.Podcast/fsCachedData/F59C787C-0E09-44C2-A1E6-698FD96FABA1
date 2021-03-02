@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+      <channel>
+        <atom:link href="https://feeds.soundcloud.com/users/soundcloud:users:114798578/sounds.rss" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://feeds.soundcloud.com/users/soundcloud:users:114798578/sounds.rss?before=393187617" rel="next" type="application/rss+xml"/>
+        <title>Lets Build That App</title>
+        <link>https://www.letsbuildthatapp.com</link>
+        <pubDate>Thu, 22 Feb 2018 04:21:46 +0000</pubDate>
+        <lastBuildDate>Thu, 22 Feb 2018 04:21:46 +0000</lastBuildDate>
+        <ttl>60</ttl>
+        <language>en</language>
+        <copyright>All rights reserved</copyright>
+        <webMaster>feeds@soundcloud.com (SoundCloud Feeds)</webMaster>
+        <description>Lets Build That App</description>
+        <itunes:subtitle>Lets Build That App</itunes:subtitle>
+        <itunes:owner>
+          <itunes:name>Brian Voong</itunes:name>
+          <itunes:email>feeds@soundcloud.com</itunes:email>
+        </itunes:owner>
+        <itunes:author>Brian Voong</itunes:author>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:image href="https://i1.sndcdn.com/avatars-000403867065-5g5khr-original.jpg"/>
+        <image>
+          <url>https://i1.sndcdn.com/avatars-000403867065-5g5khr-original.jpg</url>
+          <title>Brian Voong</title>
+          <link>https://www.letsbuildthatapp.com</link>
+        </image>
+        <itunes:category text="Technology"/>
+        <item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/396259545</guid>
+      <title>My Experiences in Computer Science Vs Real World</title>
+      <pubDate>Thu, 08 Feb 2018 09:22:55 +0000</pubDate>
+      <link>https://soundcloud.com/brian-hong-voong/my-experiences-in-computer-science-vs-real-world</link>
+      <itunes:duration>00:09:33</itunes:duration>
+      <itunes:author>Brian Voong</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>In this episode, I wanted to talk briefly about some of my experiences as a Computer Science student vs some of the things I've seen being a Programmer in the real world. Hopefully you can walk away from this episode with some questions answered and maybe you can set some better expectations for CS degree programs and real world engineering.</itunes:summary>
+      <itunes:subtitle>In this episode, I wanted to talk briefly about s…</itunes:subtitle>
+      <description>In this episode, I wanted to talk briefly about some of my experiences as a Computer Science student vs some of the things I've seen being a Programmer in the real world. Hopefully you can walk away from this episode with some questions answered and maybe you can set some better expectations for CS degree programs and real world engineering.</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/396259545-brian-hong-voong-my-experiences-in-computer-science-vs-real-world.mp3" length="13758077"/>
+      <itunes:image href="https://i1.sndcdn.com/avatars-000403867065-5g5khr-original.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/394194252</guid>
+      <title>How and When I Got My Start in Programming</title>
+      <pubDate>Sun, 04 Feb 2018 04:09:57 +0000</pubDate>
+      <link>https://soundcloud.com/brian-hong-voong/how-and-when-i-got-my-start-in-programming</link>
+      <itunes:duration>00:09:48</itunes:duration>
+      <itunes:author>Brian Voong</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>My story on how I got my first taste of the world of programming.  It'll surprise some of you that I actually started out with learning how to create graphics using Photoshop and Flash.  Hope you find my story interesting, looking forward to anyone that wants to share their story as well.</itunes:summary>
+      <itunes:subtitle>My story on how I got my first taste of the world…</itunes:subtitle>
+      <description>My story on how I got my first taste of the world of programming.  It'll surprise some of you that I actually started out with learning how to create graphics using Photoshop and Flash.  Hope you find my story interesting, looking forward to anyone that wants to share their story as well.</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/394194252-brian-hong-voong-how-and-when-i-got-my-start-in-programming.mp3" length="14110189"/>
+      <itunes:image href="https://i1.sndcdn.com/avatars-000403867065-5g5khr-original.jpg"/>
+    </item><item>
+      <guid isPermaLink="false">tag:soundcloud,2010:tracks/393187617</guid>
+      <title>Storyboard vs Code SpeedRun</title>
+      <pubDate>Fri, 02 Feb 2018 00:35:33 +0000</pubDate>
+      <link>https://soundcloud.com/brian-hong-voong/storyboard-vs-code-speedrun</link>
+      <itunes:duration>00:29:36</itunes:duration>
+      <itunes:author>Brian Voong</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:summary>In this episode, we go over a rather quick example application and trying to implement a solution using both Storyboard and Pure Programmatic Code.  I will try to do this as quickly as possible just to illustrate how simple it is to use code for ordinary, tedious tasks.</itunes:summary>
+      <itunes:subtitle>In this episode, we go over a rather quick exampl…</itunes:subtitle>
+      <description>In this episode, we go over a rather quick example application and trying to implement a solution using both Storyboard and Pure Programmatic Code.  I will try to do this as quickly as possible just to illustrate how simple it is to use code for ordinary, tedious tasks.</description>
+      <enclosure type="audio/mpeg" url="https://feeds.soundcloud.com/stream/393187617-brian-hong-voong-storyboard-vs-code-speedrun.mp3" length="42679431"/>
+      <itunes:image href="https://i1.sndcdn.com/artworks-000295827780-xegk1e-t3000x3000.jpg"/>
+    </item>
+      </channel>
+    </rss>
