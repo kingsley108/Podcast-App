@@ -47,12 +47,20 @@
                             </label>
                         </subviews>
                     </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lI-VJ-dMX">
+                        <rect key="frame" x="33" y="66.5" width="66" height="36"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Bde-rr-d4X" secondAttribute="trailing" constant="16" id="2d2-Hw-gcJ"/>
+                    <constraint firstItem="2lI-VJ-dMX" firstAttribute="centerX" secondItem="acg-Wm-7s9" secondAttribute="centerX" id="AFC-qT-1WK"/>
                     <constraint firstItem="acg-Wm-7s9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="EQt-DZ-PMP"/>
                     <constraint firstItem="Bde-rr-d4X" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IT5-kk-dbd"/>
                     <constraint firstItem="Bde-rr-d4X" firstAttribute="leading" secondItem="acg-Wm-7s9" secondAttribute="trailing" constant="16" id="MzM-dI-K6r"/>
+                    <constraint firstItem="2lI-VJ-dMX" firstAttribute="centerY" secondItem="acg-Wm-7s9" secondAttribute="centerY" id="VPo-Or-oGc"/>
                     <constraint firstItem="acg-Wm-7s9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mNh-uK-SN7"/>
                 </constraints>
             </tableViewCellContentView>
@@ -62,6 +70,7 @@
                 <outlet property="episodeDescription" destination="GGz-gG-mtr" id="HKB-Ct-5Yr"/>
                 <outlet property="episodeImage" destination="acg-Wm-7s9" id="edh-je-HWI"/>
                 <outlet property="episodeTitle" destination="oah-ZF-3S6" id="zhJ-ih-5Ga"/>
+                <outlet property="progressLabel" destination="2lI-VJ-dMX" id="LA0-gu-UzX"/>
             </connections>
             <point key="canvasLocation" x="244.20289855072465" y="130.24553571428572"/>
         </tableViewCell>

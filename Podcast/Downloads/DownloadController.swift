@@ -32,12 +32,17 @@ class DownloadController: UITableViewController {
     }
     
     @objc func downloadNotificationRecieved(notification: Notification) {
-        let progress = notification.userInfo?["Progress"] as? String
+        
+        guard let progressValue = notification.userInfo?["Progress"] as? Double else {return}
         let episodeTitle = notification.userInfo?["Episode Title"] as? String
         guard let index = downloadedEpisodes.firstIndex(where: {$0.title == episodeTitle}) else {return}
         let currentCell = self.tableView.cellForRow(at: IndexPath(row: index, section: 0)) as? EpisodesCell
-        print(progress)
-        currentCell?.progressLabel.isHidden = true
+        currentCell?.progressLabel.isHidden = false
+        let progressString = String(format: "%.0f", progressValue * 100)
+        currentCell?.progressLabel.text = "\(progressString)%"
+        if Int(progressString) == 100 {
+            currentCell?.progressLabel.isHidden = true
+        }
         
         
     }

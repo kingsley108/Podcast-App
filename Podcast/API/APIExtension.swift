@@ -47,7 +47,7 @@ class APIExtension {
         let destination = DownloadRequest.suggestedDownloadDestination()
         AF.download(episode.audioStream, to:destination)
                 .downloadProgress { (progress) in
-                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: Variables.NotificationName), object: nil, userInfo: ["Episode Title": episode.title, "Progress": progress])
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: Variables.NotificationName), object: nil, userInfo: ["Episode Title": episode.title, "Progress": progress.fractionCompleted])
                 }
                 .response { (response) in
                     downloadedEpisodes[index].downloadedEpisodeFilePath = response.fileURL?.absoluteString

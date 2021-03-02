@@ -37,7 +37,7 @@ class EpisodesCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        progressLabel.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
